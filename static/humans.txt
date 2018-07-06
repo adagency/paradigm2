@@ -1,0 +1,25 @@
+/* SITE */
+  Paradigm Constuction /
+  paradigmconstruction-tx.com
+  Last update: 2018/30/4
+  Doctype: HTML5
+  Stack: React, Redux, SCSS, Webpack, Babel
+
+/* TEAM */
+  Agency: Creator Company
+          adnorml.com
+
+  Lead: Darren Eiswirth
+  Contact: darren@adnorml.com
+
+  Content Strategist: Lisa Eiswirth
+  Contact: lisa@adnorml.com
+
+  UI developer: Chris Tran
+  Contact: chris@adnorml.com
+
+  Layout and Designer: Troy Johnson
+  Contact: troy@adnorml.com
+
+  Developer: David Clausen
+  Contact: david@adnorml.com

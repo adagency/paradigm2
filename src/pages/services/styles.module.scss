@@ -1,0 +1,59 @@
+.wrapper {
+  background-color: $primary;
+  position: relative;
+
+  h3,
+  h4 {
+    color: $white;
+  }
+
+  h3,
+  p {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(medium) {
+    h3,
+    p {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include breakpoint(large) {
+    h3,
+    p {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+
+.topPrint {
+  bottom: 0;
+  left: 0;
+  max-height: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include breakpoint(medium) {
+    max-height: 700px;
+  }
+
+  @include breakpoint(large) {
+    max-height: none;
+  }
+}
+
+.title {
+  padding-left: 55px;
+  position: relative;
+}
+
+.imgContainer {
+  left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-20px, -50%);
+  width: 45px;
+}

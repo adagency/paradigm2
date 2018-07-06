@@ -1,0 +1,45 @@
+.button {
+  display: inline;
+  font-family: $header-font-family;
+  font-size: 1.5em;
+  font-weight: 200;
+  opacity: 0.75;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.5s opacity ease-in-out;
+
+  &:before {
+    border-bottom: 1px solid $grey;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 1em;
+  }
+
+  &:after {
+    border-bottom: 1px solid $white;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s transform ease-in-out;
+  }
+
+  &:hover {
+    color: $white;
+    opacity: 1;
+
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.link {
+  color: $grey;
+  text-decoration: none;
+}

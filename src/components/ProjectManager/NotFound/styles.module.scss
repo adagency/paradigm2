@@ -1,0 +1,44 @@
+.wrapper {
+  background-color: #212121;
+  min-height: 100vh;
+}
+
+.container {
+  color: $white;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+
+  & span {
+    color: $grey;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+
+  & li {
+    flex: 0 0 100%;
+  }
+
+  @include breakpoint(medium) {
+    & li {
+      flex: 0 0 50%;
+      padding-right: 2em;
+    }
+  }
+}
+
+.link {
+  color: $white;
+  // text-decoration: none;
+  text-decoration-color: #aaa;
+}

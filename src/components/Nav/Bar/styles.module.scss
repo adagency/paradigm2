@@ -1,0 +1,77 @@
+.container {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: $nav-height;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left {
+  display: none;
+  
+  a {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-family: $header-font-family;
+    font-size: 15px;
+    font-weight: 200;
+    height: 100%;
+    opacity: 1;
+    padding: 0 0.5em;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in, color 0.25s ease-in;
+
+    &:not(.logoLink):hover {
+      background-color: $white;
+      color: $black;
+    }
+
+    @include breakpoint(692px) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 20px;
+    }
+  }
+
+  .logoLink {
+    display: block;
+    flex: 0 0 auto;
+    max-width: 70px;
+    padding: 5px 0;
+    text-align: center;
+
+    img {
+      height: calc(100% - 1px);
+      max-width: none;
+      width: auto;
+    }
+  }
+  
+
+  @include breakpoint(medium) {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+.right {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  bottom: 0;
+  left: 0;
+  opacity: 0.15;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 300%;
+
+  @include breakpoint(medium) {
+    width: 200%;
+  }
+
+  @include breakpoint(large) {
+    width: 150%;
+  }
+
+  @include breakpoint(xlarge) {
+    width: 100%;
+  }
+}
+
+.svg {
+  fill: none;
+  height: auto;
+  stroke: $grey;
+  stroke-width: 1;
+  width: 100%;
+}
+

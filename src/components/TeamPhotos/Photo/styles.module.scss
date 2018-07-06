@@ -1,0 +1,57 @@
+.container {
+  cursor: pointer;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 10px;
+
+  @include breakpoint(medium) {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  @include breakpoint(large) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  &:hover {
+    .img {
+      opacity: 0.65;
+    }
+
+    .name:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.img {
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    border-bottom: 1px solid $grey;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 1em;
+  }
+
+  &:after {
+    border-bottom: 1px solid $white;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s transform ease-in-out;
+  }
+}

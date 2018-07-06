@@ -1,0 +1,147 @@
+.wrapper {
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  @include breakpoint(medium) {
+    max-height: 800px;
+  }
+
+  @include breakpoint(large) {
+    max-height: 1080px;
+  }
+}
+
+.full {
+  composes: wrapper;
+  height: calc(100vh - #{$nav-height});
+  min-height: 350px;
+}
+
+.half {
+  composes: wrapper;
+  height: calc(50vh - #{$nav-height});
+  min-height: 250px;
+}
+
+.overlay {
+  @include mask();
+  animation: fade-in 4s ease-out forwards;
+  background-color: $secondary;
+  content: '';
+  display: block;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+@keyframes fade-in{
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.35;
+  }
+}
+
+.animation {
+  animation: panning 120s infinite ease;
+}
+
+.imageWrapper {
+  bottom: 0;
+  left: -100px;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  transform: translateX(100px);
+}
+
+.image {
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+
+  img {
+    bottom: 0;
+    height: auto !important; /* stylelint-disable-line declaration-no-important */
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    right: 0;
+    width: auto !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  @supports (object-fit: cover) {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    img {
+      height: 100% !important; /* stylelint-disable-line declaration-no-important */
+      min-height: 0;
+      min-width: 0;
+      width: 100% !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+@keyframes panning {
+  0% {
+    transform: scale(1) translateX(100px);
+  }
+
+  50% {
+    transform: scale(1.1) translateX(-100px);
+  }
+
+  100% {
+    transform: scale3(1) translateX(100px);
+  }
+}
+
+.container {
+  @include flex-grid-row();
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 20px;
+  position: relative;
+  transform-origin: center;
+  width: 100%;
+  z-index: 2;
+
+  h1,
+  h2,
+  p {
+    color: $white;
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(medium) {
+    h1,
+    h2,
+    p {
+      font-size: 2.75rem;
+    }
+  }
+
+  @include breakpoint(large) {
+    h1,
+    h2,
+    p {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.content {
+  max-width: 650px;
+}

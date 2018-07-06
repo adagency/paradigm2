@@ -1,0 +1,28 @@
+.wrapper {
+  position: relative;
+  
+  h3,
+  h4 {
+    color: $white;
+  }
+
+  h3 {
+    margin: 40px 0;
+  }
+
+  h3:first-child {
+    margin: 0 0 40px;
+  }
+
+  @include breakpoint(medium) {
+    h3 {
+      margin: 50px 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    h3 {
+      margin: 60px 0;
+    }
+  }
+}

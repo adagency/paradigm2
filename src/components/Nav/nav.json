@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "links": [
+      { "text": "Home", "to": "/" },
+      { "text": "Projects", "to": "/projects#" },
+      { "text": "Services", "to": "/services" },
+      { "text": "Leadership", "to": "/leadership" },
+      { "text": "Who We Are", "to": "/who-we-are" },
+      { "text": "Blog", "to": "/blog" },
+      { "text": "Contact", "to": "/contact" }
+    ]
+  }
+}

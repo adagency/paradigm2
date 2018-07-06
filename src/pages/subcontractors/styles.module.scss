@@ -1,0 +1,14 @@
+.heading {
+  color: $blue;
+  text-transform: uppercase;
+}
+
+.link {
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity 0.15s ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+}

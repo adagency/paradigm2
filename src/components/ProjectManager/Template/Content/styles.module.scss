@@ -1,0 +1,41 @@
+$darken-color: darken($white, 30);
+
+.col {
+  flex: 0 0 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  
+  @include breakpoint(850) {
+    flex: 0 0 60%;
+  }
+}
+
+.info {
+  font-family: $header-font-family;
+  font-size: 1.4em;
+  font-weight: 200;
+  margin-bottom: 1em;
+  position: relative;
+  text-transform: uppercase;
+
+  & p {
+    margin: 0.5em 0;
+  }
+
+  & span {
+    color: $darken-color;
+  }
+}
+
+.image {
+  max-width: 200px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.content {
+  color: $darken-color;
+}

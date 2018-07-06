@@ -1,0 +1,84 @@
+.wrapper {
+  background-color: $grey;
+  color: $white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 0;
+}
+
+.button {
+  background-position: center;
+  background-size: cover;
+  border: 1px solid $black;
+  color: inherit;
+  display: inline-block;
+  font-family: $header-font-family;
+  margin: 20px 0;
+  max-width: 375px;
+  min-width: 300px;
+  padding: 2em 0;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  transition: text-shadow 0.25s ease-in;
+  width: 100%;
+  z-index: 0;
+
+  &:before {
+    @include mask();
+    background-color: $black;
+    content: '';
+    display: block;
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+    z-index: -1;
+  }
+
+  &:hover {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+    &:before {
+      opacity: 0.2;
+    }
+  }
+
+  @include breakpoint(medium) {
+    margin: 20px;
+  }
+}
+
+.link {
+  background-color: $black;
+  border: 1px solid $black;
+  color: inherit;
+  display: inline-block;
+  padding: 1em 2em;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.25s ease-in;
+  z-index: 0;
+
+  &:before {
+    @include mask();
+    background-color: $grey;
+    content: '';
+    display: block;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease-in;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $black;
+
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+}

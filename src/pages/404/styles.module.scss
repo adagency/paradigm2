@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: #212121;
+  min-height: 50vh;
+}
+
+.container {
+  color: $white;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+
+  & span {
+    color: $grey;
+  }
+}
+
+.link {
+  color: $white;
+  display: block;
+  // text-decoration: none;
+  text-align: center;
+  text-decoration-color: #aaa;
+  width: 100%;
+}
