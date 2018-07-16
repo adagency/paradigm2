@@ -1,107 +1,107 @@
 .container {
-  background-color: transparent;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translateX(-100%);
-  z-index: 5;
+	background-color: transparent;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateX(-100%);
+	z-index: 5;
 }
 
 .overlay {
-  @include mask();
-  background-color: $black;
-  opacity: 0.5;
-  z-index: -1;
+	@include mask();
+	background-color: $black;
+	opacity: 0.5;
+	z-index: -1;
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.85);
-  height: 100%;
-  max-width: 500px;
-  min-height: 300px;
-  z-index: 1;
+	background-color: rgba(255, 255, 255, 0.85);
+	height: 100%;
+	max-width: 500px;
+	min-height: 300px;
+	z-index: 1;
 }
 
 .list {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - #{$nav-height});
-  justify-content: space-around;
-  max-width: 400px;
-  padding-left: 38px;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - #{$nav-height});
+	justify-content: space-around;
+	max-width: 400px;
+	padding-right: 38px;
 }
 
 .bar {
-  align-items: center;
-  display: flex;
-  height: $nav-height;
-  justify-content: flex-start;
-  margin: 0 auto;
-  max-width: $global-width;
-  min-height: $nav-height;
-  padding: 5px 38px;
-  position: relative;
-  width: 100%;
-  z-index: 2;
+	align-items: center;
+	display: flex;
+	height: $nav-height;
+	justify-content: flex-start;
+	margin: 0 auto;
+	max-width: $global-width;
+	min-height: $nav-height;
+	padding: 5px 38px;
+	position: relative;
+	width: 100%;
+	z-index: 2;
 }
 
 .closeBtn {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  &:hover {
-    cursor: pointer;
-  }
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .svg {
-  fill: $blue;
-  height: 27.5px;
-  margin-bottom: 5px;
-  width: 27.5px;
+	fill: $blue;
+	height: 27.5px;
+	margin-bottom: 5px;
+	width: 27.5px;
 }
 
 .closeText {
-  color: $blue;
-  display: block;
-  font-size: 10px;
-  text-transform: uppercase;
+	color: $blue;
+	display: block;
+	font-size: 10px;
+	text-transform: uppercase;
 }
 
 .menu {
-  align-items: center;
-  display: flex;
-  height: calc(100% - #{$nav-height});
-  max-height: 780px;
+	justify-content: flex-end;
+	align-items: center;
+	display: flex;
+	height: calc(100% - #{$nav-height});
+	max-height: 780px;
 }
 
 .link {
-  color: $black;
-  display: block;
-  font-family: $header-font-family;
-  font-size: 30px;
-  font-weight: 200;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.25s ease-in;
+	color: $black;
+	display: block;
+	font-family: $header-font-family;
+	font-size: 30px;
+	font-weight: 200;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color 0.25s ease-in;
 
-  &:hover {
-    color: $blue;
-  }
+	&:hover {
+		color: $blue;
+	}
 
-  &:active,
-  &:focus {
-    color: $blue;
-  }
+	&:active,
+	&:focus {
+		color: $blue;
+	}
 }
 
-
 .logo {
-  max-height: 100%;
-  padding: 0 20px;
+	max-height: 100%;
+	padding: 0 20px;
 }
