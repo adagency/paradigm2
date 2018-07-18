@@ -59,7 +59,6 @@ export default class componentName extends Component {
           {owner && <p>Owner: <span>{owner}</span></p>}
           {start && <p>{startText} <span>{startDate.format('MM/DD/YYYY')}</span></p>}
           {completion && <p>{completionText} <span>{completionDate.format('MM/DD/YYYY')}</span></p>}
-          {location && <p>Location: <span>{location}</span></p>}
           {architect && <p>Architect: <span>{architect}</span></p>}
           <img className={styles.image} src={logo} alt='' />
         </div>
