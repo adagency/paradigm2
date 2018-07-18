@@ -1,134 +1,136 @@
 .wrapper {
-  @include mask();
-  background-color: $secondary;
-  border-bottom: 1px solid $black;
-  overflow: hidden;
-  padding-top: $nav-height;
-  z-index: 0;
+	@include mask();
+	background-color: $secondary;
+	border-bottom: 1px solid $black;
+	overflow: hidden;
+	padding-top: $nav-height;
+	z-index: 0;
 }
 
 .background {
-  @include mask();
-  z-index: -1;
+	@include mask();
+	z-index: -1;
 }
 
 .svg {
-  fill: none;
-  fill-opacity: 0.1;
-  height: auto;
-  position: relative;
-  right: 0;
-  stroke: #fff;
-  stroke-opacity: 0.1;
-  stroke-width: 0.2;
-  top: 0;
-  width: 400%;
-  
-  @include breakpoint(medium) {
-    height: auto;
-    left: 0%;
-    top: 0%;
-    width: 100%;
-  }
+	fill: none;
+	fill-opacity: 0.1;
+	height: auto;
+	position: relative;
+	right: 0;
+	stroke: #fff;
+	stroke-opacity: 0.1;
+	stroke-width: 0.2;
+	top: 0;
+	width: 400%;
+
+	@include breakpoint(medium) {
+		height: auto;
+		left: 0%;
+		top: 0%;
+		width: 100%;
+	}
 }
 
 .container {
-  @include flex-grid-row();
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-  padding-right: 30px;
-  width: 100%;
+	@include flex-grid-row();
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	padding-right: 30px;
+	width: 100%;
 
-  @include breakpoint(medium) {
-    padding-right: 50px;
-  }
+	@include breakpoint(medium) {
+		padding-right: 50px;
+	}
 }
 
 .content {
-  @include flex-grid-column(12);
-  
+	@include flex-grid-column(12);
 
-  h2 {
-    color: $blue;
-    font-size: 1.2em;
-    text-transform: uppercase;
-  }
+	h2 {
+		color: $blue;
+		font-size: 1.2em;
+		text-transform: uppercase;
+	}
 
-  p {
-    font-size: 0.85em;
-    line-height: 1.3;
-    margin: 0;
-  }
+	p {
+		font-size: 0.85em;
+		line-height: 1.3;
+		margin: 0;
+	}
 
-  @include breakpoint(medium) {
-    order: 1;
+	@include breakpoint(medium) {
+		order: 1;
 
-    @include flex-grid-column(6);
+		@include flex-grid-column(6);
 
-    h2 {
-      font-size: 2em;
-    }
-  
-    p {
-      font-size: 0.95em;
-    }
-  }
+		h2 {
+			font-size: 2em;
+		}
 
-  @include breakpoint(large) {
-    @include flex-grid-column(6);
+		p {
+			font-size: 0.95em;
+		}
+	}
 
-    h2 {
-      font-size: 2.75em;
-    }
-  
-    p {
-      font-size: 1.1em;
-    }
-  }
+	@include breakpoint(large) {
+		@include flex-grid-column(6);
+
+		h2 {
+			font-size: 2.75em;
+		}
+
+		p {
+			font-size: 1.1em;
+		}
+	}
 }
 
 .link {
-  color: $blue;
-  font-family: $header-font-family;
-  font-size: 1.2em;
-  font-weight: 200;
-  text-decoration: none;
-  text-transform: uppercase;
+	color: $blue;
+	font-family: $header-font-family;
+	font-size: 1.2em;
+	font-weight: 200;
+	text-decoration: none;
+	text-transform: uppercase;
 
-  @include breakpoint(medium) {
-    font-size: 1.4em;
-  }
+	@include breakpoint(medium) {
+		font-size: 1.4em;
+	}
 }
 
 .right {
-  @include flex-grid-column(12);
-  text-align: center;
+	@include flex-grid-column(12);
+	text-align: center;
 
-  @include breakpoint(medium) {
-    @include flex-grid-column(6);
-    max-width: none;
-  }
+	@include breakpoint(medium) {
+		@include flex-grid-column(6);
+		max-width: none;
+	}
 }
 
 .imageWrapper {
-  height: 0;
-  margin: auto;
-  max-width: 250px;
-  padding-bottom: 91.666%;
-  position: relative;
-  width: 100%;
+	height: 0;
+	margin: auto;
+	max-width: 250px;
+	padding-bottom: 91.666%;
+	position: relative;
+	width: 100%;
 
-  img {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+	img {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
 
-  @include breakpoint(medium) {
-    max-width: none;
-  }
+	@include breakpoint(medium) {
+		max-width: none;
+	}
 }
 
-
+.cardItem {
+	height: 352px;
+	width: 252px;
+}
