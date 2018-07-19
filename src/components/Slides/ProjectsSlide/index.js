@@ -51,9 +51,9 @@ export default class ProjectsSlide extends Component {
 				{ opacity: 1, y: 0 },
 				0.25
 			)
-			//.from(paths, 10, { drawSVG: '1500 50%', ease: Power0.easeNone }, 1)
-			.from(houseDrawing, 2, { drawSVG: '50% 50%', ease: Power0.easeNone }, 0.5)
-			.staggerFrom(parts, 0.5, { opacity: 0, y: -15 }, 0.15, 2);
+			.staggerFrom(parts, 0.5, { opacity: 0, y: -15 }, 0.15, 0.1);
+		//.from(paths, 10, { drawSVG: '1500 50%', ease: Power0.easeNone }, 1)
+		//.from(houseDrawing, 2, { drawSVG: '50% 50%', ease: Power0.easeNone }, 0.5)
 	}
 
 	onEntering = (direction, timeout, firstAppear) => {

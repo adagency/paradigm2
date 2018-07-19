@@ -5,6 +5,12 @@ import Link from 'components/Link';
 import Card from './Card';
 import SVGBackground from './SVGBackground';
 
+import BrandonAery from './Brandon Aery.png';
+import DGutierrez from './D Gutierrez.png';
+import GaryFoster from './Gary Foster.png';
+import DHall from './D Hall.png';
+import TerrySmith from './Terry Smith.png';
+
 import styles from './styles.module.scss';
 
 export default class LeadershipSlide extends Component {
@@ -16,9 +22,19 @@ export default class LeadershipSlide extends Component {
 
 	componentDidMount() {
 		//	const paths = this.svg.children;
-		/*this.animation = new TimelineMax({ paused: true })
-			.fromTo(this.image, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 })
-			.staggerFromTo(
+		this.animation = new TimelineMax({ paused: true })
+			.fromTo(this.awardCard, 0.3, { x: -800, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.dustinImage, 0.3, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.dustinBox, 0.5, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.terryImage, 0.3, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.terryBox, 0.5, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.garyImage, 0.3, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.garyBox, 0.5, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.brandonImage, 0.3, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.brandonBox, 0.5, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.debraImage, 0.3, { x: -10000, y: 0 }, { x: 0, y: 0 })
+			.fromTo(this.debraBox, 0.5, { x: -10000, y: 0 }, { x: 0, y: 0 });
+		/*.staggerFromTo(
 				this.container.children,
 				1,
 				{ opacity: 0, y: 25 },
@@ -29,38 +45,143 @@ export default class LeadershipSlide extends Component {
 	}
 
 	onEntering = (direction, timeout, firstAppear) => {
-		/*this.animation
+		this.animation
 			.timeScale(1)
 			.delay(timeout * 1.25)
-			.restart(true);*/
+			.restart(true);
 	};
 
 	onLeaving = (direction, timeout) => {
-		//	this.animation.pause(0);
+		this.animation.pause(0);
 	};
 
 	render() {
 		const { children, sizes } = this.props;
 		return (
 			<div className={styles.wrapper}>
-				<Card style={{ backgroundColor: '#20333E' }}>
-					AWARD-WINNING PERSONNEL.HIGHER STANDARDS OF WORK.
-				</Card>
-				<Card>
-					<img />
-				</Card>
-				<Card>
-					<img />
-				</Card>
-				<Card>
-					<img />
-				</Card>
-				<Card>
-					<img />
-				</Card>
-				<Card>
-					<img />
-				</Card>
+				<div className={styles.cardRow}>
+					<Card style={{ backgroundColor: '#20333E' }}>
+						<div className={styles.awardCard} ref={c => (this.awardCard = c)}>
+							<p>
+								AWARD-WINNING PERSONNEL.<br />HIGHER STANDARDS OF WORK.
+							</p>
+						</div>
+					</Card>
+					<Card>
+						<img
+							src={DHall}
+							className={styles.leaderImage}
+							ref={image => (this.dustinImage = image)}
+						/>
+						<div className={styles.leaderOverlay}>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								lacinia eros at mattis gravida. Morbi non felis ac orci aliquam
+								congue. Donec ullamcorper consectetur metus et fermentum.
+								Suspendisse sollicitudin tincidunt ex.
+							</div>
+						</div>
+						<div
+							className={styles.leaderInfoBox}
+							ref={c => (this.dustinBox = c)}>
+							<h4 className={styles.leaderName}>Dustin Hall</h4>
+							<div className={styles.whiteDivider} />
+							<span className={styles.leaderPosition}>President</span>
+						</div>
+					</Card>
+					<Card>
+						<img
+							src={TerrySmith}
+							className={styles.leaderImage}
+							ref={image => (this.terryImage = image)}
+						/>
+						<div className={styles.leaderOverlay}>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								lacinia eros at mattis gravida. Morbi non felis ac orci aliquam
+								congue. Donec ullamcorper consectetur metus et fermentum.
+								Suspendisse sollicitudin tincidunt ex.
+							</div>
+						</div>
+						<div
+							className={styles.leaderInfoBox}
+							ref={c => (this.terryBox = c)}>
+							<h4 className={styles.leaderName}>Terry Smith</h4>
+							<div className={styles.whiteDivider} />
+							<span className={styles.leaderPosition}>
+								Executive Vice President
+							</span>
+						</div>
+					</Card>
+				</div>
+				<div className={styles.cardRow}>
+					<Card>
+						<img
+							src={GaryFoster}
+							className={styles.leaderImage}
+							ref={image => (this.garyImage = image)}
+						/>
+						<div className={styles.leaderOverlay}>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								lacinia eros at mattis gravida. Morbi non felis ac orci aliquam
+								congue. Donec ullamcorper consectetur metus et fermentum.
+								Suspendisse sollicitudin tincidunt ex.
+							</div>
+						</div>
+						<div className={styles.leaderInfoBox} ref={c => (this.garyBox = c)}>
+							<h4 className={styles.leaderName}>Gary Foster</h4>
+							<div className={styles.whiteDivider} />
+							<span className={styles.leaderPosition}>
+								Senior Vice President
+							</span>
+						</div>
+					</Card>
+					<Card>
+						<img
+							src={BrandonAery}
+							className={styles.leaderImage}
+							ref={image => (this.brandonImage = image)}
+						/>
+						<div className={styles.leaderOverlay}>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								lacinia eros at mattis gravida. Morbi non felis ac orci aliquam
+								congue. Donec ullamcorper consectetur metus et fermentum.
+								Suspendisse sollicitudin tincidunt ex.
+							</div>
+						</div>
+						<div
+							className={styles.leaderInfoBox}
+							ref={c => (this.brandonBox = c)}>
+							<h4 className={styles.leaderName}>Brandon Aery</h4>
+							<div className={styles.whiteDivider} />
+							<span className={styles.leaderPosition}>Vice President</span>
+						</div>
+					</Card>
+					<Card>
+						<img
+							src={DGutierrez}
+							className={styles.leaderImage}
+							ref={image => (this.debraImage = image)}
+						/>
+						<div className={styles.leaderOverlay}>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								lacinia eros at mattis gravida. Morbi non felis ac orci aliquam
+								congue. Donec ullamcorper consectetur metus et fermentum.
+								Suspendisse sollicitudin tincidunt ex.
+							</div>
+						</div>
+						<div
+							className={styles.leaderInfoBox}
+							ref={c => (this.debraBox = c)}>
+							<h4 className={styles.leaderName}>Debra Gutierrez</h4>
+							<div className={styles.whiteDivider} />
+							<span className={styles.leaderPosition}>Controller</span>
+						</div>
+					</Card>
+				</div>
 			</div>
 		);
 	}

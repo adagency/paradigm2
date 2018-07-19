@@ -10,6 +10,7 @@ class Card extends Component {
 		hasOverlay: PropTypes.bool.isRequired,
 		styles: PropTypes.object
 	};
+
 	render() {
 		const { hasOverlay, children, style } = this.props;
 		return (
