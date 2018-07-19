@@ -18,7 +18,7 @@ export default class Card extends Component {
       <Link className={styles.wrapper} to={`/projects#${content.uid}`}>
         <div className={styles.background} style={style} />
         <div className={styles.content}>
-          <h3>
+          <h3 className={styles.title}>
             {
               content.data.title.split(' ').map((word, index) => (
                 <span key={index}>{word + ' '}</span>
