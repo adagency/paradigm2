@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'components/Helmet'
 import Banner from 'components/Banner'
 import Content, { Col } from 'components/Content'
+import Industries from 'components/Industries'
 import styles from './styles.module.scss'
 
 import AnimScroll from 'components/AnimationScroll'
@@ -56,6 +57,7 @@ export default function ContactPage({ data }) {
           </AnimScroll>
         </Col>
       </Content>
+      <Industries />
     </main>
   )
 }

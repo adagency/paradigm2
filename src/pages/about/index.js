@@ -4,6 +4,7 @@ import Helmet from 'components/Helmet'
 import Banner from 'components/Banner'
 import AnimScroll from 'components/AnimationScroll'
 import Content, { Col } from 'components/Content'
+import Industries from 'components/Industries'
 import AnimatedStats from 'components/AnimatedStats'
 import Affiliations from 'components/Affiliations'
 
@@ -56,6 +57,7 @@ export default function AboutPage({ data }) {
       </div>
       <AnimatedStats />
       <Affiliations />
+      <Industries />
     </main>
   )
 }
