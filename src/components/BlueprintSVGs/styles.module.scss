@@ -18,11 +18,6 @@
   width: 300%;
   height: 100%;
 
-  @include breakpoint(xsmall) {
-    width: 300%;
-    height: 100%;
-  }
-
   @include breakpoint(small) {
     width: 250%;
     height: 100%;
