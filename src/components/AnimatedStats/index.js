@@ -88,7 +88,7 @@ export default class AnimatedStats extends Component {
               <div className={styles.quadrant} ref={c => { this.valueDiv = c }}>
                 <div className={styles.content}>
                   <span className={styles.number} ref={c => { this.valueNum = c }}><span className={styles.subText}><sup>$</sup></span>{round(value, 1)}<span className={styles.subText}>B</span></span><span className={styles.sign}>+</span><br />
-                  <span className={styles.text}>Value of total properties built each year</span>
+                  <span className={styles.text}>Total managed work</span>
                 </div>
               </div>
               <div className={styles.quadrant} ref={c => { this.percentDiv = c }}>

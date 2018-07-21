@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import Link from 'components/Link'
-import Typing from 'react-typing-animation'
 
 export default class Card extends Component {
   static propTypes = {
