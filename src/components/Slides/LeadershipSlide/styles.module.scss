@@ -147,21 +147,67 @@
 	display: flex;
 	height: 50%;
 	justify-content: center;
+	flex-wrap: wrap;
+	flex: 1;
 	align-items: center;
 	padding: 0% 10% 0% 10%;
+
+	@include breakpoint(1083px down) {
+		flex-direction: row;
+		padding: 0;
+	}
+
+	@include breakpoint(768px down) {
+		flex-direction: row;
+		padding: 0;
+	}
+
+	@include breakpoint(560px down) {
+		flex-direction: row;
+		padding: 0;
+	}
 
 	p {
 		font-size: 100%;
 		margin: 0;
+
+		@include breakpoint(1083px down ) {
+			font-size: 80%;
+		}
+
+		@include breakpoint(768px down) {
+			font-size: 70%;
+		}
+
+		@include breakpoint(560px down ) {
+			font-size: 50%;
+		}
 	}
 }
 
 .cardItem {
 	position: relative;
-	height: 341px;
+	height: 70%;
 	width: 241px;
 	margin-top: -5%;
 	margin-right: 48px;
+
+	@include breakpoint(1083px down) {
+		height: 50%;
+		width: 24%;
+		margin-right: 20px;
+	}
+
+	@include breakpoint(768px down) {
+		height: 50%;
+		width: 25%;
+	}
+
+	@include breakpoint(560px down) {
+		height: 40%;
+		width: 25%;
+		margin-right: 10px;
+	}
 }
 
 .cardItem:hover .leaderOverlay {
@@ -171,8 +217,20 @@
 .leaderImage {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	max-width: 230px;
+	min-width: 200px;
+	min-height: 275px;
 	display: block;
+
+	@include breakpoint(560px down) {
+		min-width: 0;
+		min-height: 0;
+	}
+
+	@include breakpoint(768px down) {
+		min-width: 0;
+		min-height: 0;
+	}
 }
 
 .leaderOverlay {
@@ -187,6 +245,18 @@
 	padding: 10px;
 	transition: 0.5s ease;
 	background-color: #2e2e33;
+
+	@include breakpoint(768px down) {
+		display: none;
+	}
+
+	@include breakpoint(560px down) {
+		display: none;
+	}
+
+	@include breakpoint(1080px down) {
+		display: none;
+	}
 }
 
 .leaderInfoBox {

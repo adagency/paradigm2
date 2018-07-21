@@ -1,22 +1,11 @@
 .wrapper {
-	@include mask();
-	//background-color: $primary;
+	height: 100vh;
 	overflow: hidden;
 	z-index: 0;
 }
 
 .container {
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
-
-	@include breakpoint(medium) {
-		left: 0;
-		right: 0;
-	}
+	height: 100%;
 }
 
 .imageWrapper {
@@ -25,12 +14,6 @@
 	position: absolute;
 	right: -100px;
 	top: 0;
-}
-
-.overlay {
-	@include mask();
-	//	background-color: $primary;
-	opacity: 0.9;
 }
 
 .image {
@@ -124,27 +107,5 @@
 		p {
 			font-size: 1.25rem;
 		}
-	}
-}
-
-.scroll {
-	animation: blink 2s alternate infinite ease-in;
-	bottom: 30px;
-	color: $grey;
-	font-size: 14px;
-	left: 0;
-	position: absolute;
-	right: 0;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-@keyframes blink {
-	from {
-		opacity: 1;
-	}
-
-	to {
-		opacity: 0.25;
 	}
 }

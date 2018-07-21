@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Link from 'components/Link';
@@ -72,16 +72,12 @@ export default class ProjectsSlide extends Component {
 		return (
 			<div className={styles.wrapper}>
 				<div className={styles.background}>
-					<img
-						src={ProjectsSlideBackground}
-						className={styles.backgroundImage}
-					/>
 					{/*<SVGBackground
 						refAnim={c => {
 							this.svg = c;
 						}}
-					/>*/}
-				</div>
+					/>*/
+/*		</div>
 				<div className={styles.container}>
 					<div className={styles.right}>
 						<div
@@ -89,8 +85,8 @@ export default class ProjectsSlide extends Component {
 							ref={c => {
 								this.imageWrapper = c;
 							}}>
-							{/*<SVGHouse />*/}
-							<img src={part1} />
+							{/*<SVGHouse />*/
+/*				<img src={part1} />
 							<img src={part2} />
 							<img src={part3} />
 							<img src={part4} />
@@ -131,4 +127,4 @@ export default class ProjectsSlide extends Component {
 			</div>
 		);
 	}
-}
+}*/

@@ -1,32 +1,41 @@
 .wrapper {
-	@include mask();
-	background-color: $secondary;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+	/*background-color: $secondary;
 	border-bottom: 1px solid $black;
 	overflow: hidden;
 	padding-top: $nav-height;
-	z-index: 0;
+	z-index: 0;*/
 }
 
 .background {
-	@include mask();
+	//@include mask();
 	z-index: -1;
+}
+
+.backgroundImage {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
 }
 
 .svg {
 	fill: none;
 	fill-opacity: 0.1;
 	height: auto;
+	left: 0;
 	position: relative;
-	right: 0;
 	stroke: #fff;
 	stroke-opacity: 0.1;
+	stroke-width: 0.2;
 	top: 0;
 	width: 400%;
 
 	@include breakpoint(medium) {
 		height: auto;
-		left: -5%;
-		top: 25%;
+		left: 0%;
+		top: 0%;
 		width: 100%;
 	}
 }
@@ -34,12 +43,10 @@
 .container {
 	@include flex-grid-row();
 	align-items: center;
-	height: 60%;
-	margin-top: 10%;
+	height: 100%;
 	justify-content: center;
 	padding-right: 30px;
 	width: 100%;
-	background-color: #20333e;
 
 	@include breakpoint(medium) {
 		padding-right: 50px;
@@ -113,15 +120,14 @@
 	height: 0;
 	margin: auto;
 	max-width: 250px;
-	padding-bottom: 68.142%;
+	padding-bottom: 76.342%;
 	position: relative;
 	width: 100%;
 
 	img {
-		display: block;
 		left: 0;
 		position: absolute;
-		top: -70px;
+		top: 0;
 		width: 100%;
 	}
 
@@ -130,12 +136,20 @@
 	}
 }
 
-.backgroundImage {
-	width: 100%;
-	height: 100%;
+.house {
+	fill: none;
+	left: calc(-3% + 2px);
+	position: absolute;
+	stroke: $white;
+	top: -9%;
+	width: 101%;
+
+	@include breakpoint(420) {
+		top: -12%;
+	}
 }
 
-.seeWhoWeAreButton {
+.viewOurProjectsButton {
 	display: inline-block;
 	position: relative;
 	background: none;
@@ -150,13 +164,13 @@
 		font-size: 1.2em;
 	}
 }
-.seeWhoWeAreButton span {
+.viewOurProjectsButton span {
 	display: block;
 	padding: 15px 30px 20px 30px;
 }
 
-.seeWhoWeAreButton::before,
-.seeWhoWeAreButton::after {
+.viewOurProjectsButton::before,
+.viewOurProjectsButton::after {
 	content: '';
 	width: 0;
 	height: 2px;
@@ -165,8 +179,8 @@
 	background: $blue;
 }
 
-.seeWhoWeAreButton span::before,
-.seeWhoWeAreButton span::after {
+.viewOurProjectsButton span::before,
+.viewOurProjectsButton span::after {
 	content: '';
 	width: 2px;
 	height: 0;
@@ -174,31 +188,31 @@
 	transition: all 0.2s linear;
 	background: $blue;
 }
-.seeWhoWeAreButton:hover::before,
-.seeWhoWeAreButton:hover::after {
+.viewOurProjectsButton:hover::before,
+.viewOurProjectsButton:hover::after {
 	width: 100%;
 }
-.seeWhoWeAreButton:hover span::before,
-.seeWhoWeAreButton:hover span::after {
+.viewOurProjectsButton:hover span::before,
+.viewOurProjectsButton:hover span::after {
 	height: 100%;
 }
 
-.seeWhoWeAreButton::after {
+.viewOurProjectsButton::after {
 	left: 0;
 	bottom: 0;
 	transition-duration: 0.4s;
 }
-.seeWhoWeAreButton span::after {
+.viewOurProjectsButton span::after {
 	right: 0;
 	top: 0;
 	transition-duration: 0.4s;
 }
-.seeWhoWeAreButton::before {
+.viewOurProjectsButton::before {
 	right: 0;
 	top: 0;
 	transition-duration: 0.4s;
 }
-.seeWhoWeAreButton span::before {
+.viewOurProjectsButton span::before {
 	left: 0;
 	bottom: 0;
 	transition-duration: 0.4s;
