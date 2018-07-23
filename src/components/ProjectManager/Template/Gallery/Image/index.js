@@ -11,7 +11,7 @@ export default function Image({ alt, size, src }) {
     backgroundImage: `url(${src})`,
   }
   return (
-    <AnimationScroll types='fadeInUp'>
+    <AnimationScroll types='gallery' duration={6}>
       <div className={cn(styles.container, styles[`size-${size}`])}>
         <div role='img' aria-label={alt} className={styles.image} style={style} />
       </div>

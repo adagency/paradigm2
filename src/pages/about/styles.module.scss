@@ -1,7 +1,10 @@
 .wrapper {
   position: relative;
-  
-  h3,
+  background-color: $primary;
+
+  h3 {
+    color: $blue;
+  }
   h4 {
     color: $white;
   }

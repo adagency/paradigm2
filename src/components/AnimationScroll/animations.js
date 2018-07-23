@@ -32,3 +32,8 @@ export const imageRight = {
   from: { transformPerspective: 1000, rotationY: 40, x: '50%', z: -500, transformOrigin: 'left', opacity: 0 },
   to: { transformPerspective: 1000, rotationY: 0, x: '0%', z: 0, transformOrigin: 'left', opacity: 1 },
 }
+
+export const gallery = {
+  from: { opacity: 0 },
+  to: { opacity: 1 }
+}

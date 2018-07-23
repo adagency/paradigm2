@@ -1,25 +1,31 @@
 .link {
-  color: $white;
-  font-size: 14px;
-  opacity: 0.5;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: opacity 0.25s ease-in;
+	color: $white;
+	font-size: 14px;
+	opacity: 0.5;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: opacity 0.25s ease-in;
 
-  span {
-    vertical-align: middle;
-  }
+	span {
+		vertical-align: middle;
+	}
 
-  &:hover {
-    opacity: 1;
-  }
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .svg {
-  fill: $white;
-  height: 20px;
-  margin-right: 5px;
-  pointer-events: none;
-  vertical-align: middle;
-  width: 20px;
+	fill: $white;
+	height: 20px;
+	margin-right: 5px;
+	pointer-events: none;
+	vertical-align: middle;
+	width: 20px;
+}
+
+.eyeIcon {
+	height: 9px;
+	width: 14px;
+	margin-right: 4px;
 }

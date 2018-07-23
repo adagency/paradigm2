@@ -27,10 +27,15 @@ export default function MunicipalsPage({ data }) {
           <Col size='two-third'>
             <AnimScroll>
               <p>
-                Inspiring workspaces, high tech security features and inviting atmospheres; Paradigm takes all these unique factors into account when planning and designing in the municipal construction markets.
+                Inspiring workspaces, high tech security features and inviting atmospheres;
+                Paradigm takes all of these unique factors into account when planning and
+                designing in the municipal construction markets.
               </p>
               <p>
-                We understand that our clients need to continue operations and to maintain a high level of customer service, and we respect that, so our project managers will accommodate by limiting construction and visibility where it is a concern.
+                We understand that our clients need to continue operations and to maintain
+                a high level of customer service, and we respect that, so our project
+                managers will accommodate by limiting construction and visibility where it
+                is a concern.
               </p>
             </AnimScroll>
           </Col>

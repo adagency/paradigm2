@@ -16,25 +16,35 @@
   position: relative;
   transform: translateX(-50%);
   width: 300%;
+  height: 100%;
+
+  @include breakpoint(small) {
+    width: 250%;
+    height: 100%;
+  }
 
   @include breakpoint(medium) {
     width: 200%;
+    height: 100%;
   }
 
   @include breakpoint(large) {
     width: 150%;
+    height: 100%;
   }
 
   @include breakpoint(xlarge) {
     width: 100%;
+    height: 100%;
   }
 }
 
 .svg {
   fill: none;
   height: auto;
-  stroke: $grey;
+  background-color: #203040;
+  stroke: $white;
   stroke-width: 1;
   width: 100%;
+  height: 100%;
 }
-

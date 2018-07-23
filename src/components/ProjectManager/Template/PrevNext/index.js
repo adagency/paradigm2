@@ -25,7 +25,7 @@ export default function PreNext({ prev, next }) {
         </Link>
       </div>
       <div>
-        <Link className={styles.link} to='/projects#'>Back To Projects</Link>
+        <Link className={styles.link} to='/projects#'>back to projects</Link>
       </div>
     </div>
   )
