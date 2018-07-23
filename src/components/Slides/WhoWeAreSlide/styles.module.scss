@@ -13,6 +13,7 @@
 }
 
 .svg {
+<<<<<<< HEAD
 	fill: none;
 	fill-opacity: 0.1;
 	height: auto;
@@ -29,6 +30,24 @@
 		top: 25%;
 		width: 100%;
 	}
+=======
+  fill: none;
+  fill-opacity: 0.1;
+  height: auto;
+  position: relative;
+  right: 0;
+  stroke: #fff;
+  stroke-opacity: 0.1;
+  top: 0;
+  width: 400%;
+
+  @include breakpoint(medium) {
+    height: auto;
+    left: -5%;
+    top: 25%;
+    width: 100%;
+  }
+>>>>>>> 87a3f7697646af4d9b0be33faa9b5cfbcfa55fbc
 }
 
 .container {
@@ -47,6 +66,7 @@
 }
 
 .content {
+<<<<<<< HEAD
 	@include flex-grid-column(12);
 
 	h2 {
@@ -84,6 +104,45 @@
 			font-size: 1.1em;
 		}
 	}
+=======
+  @include flex-grid-column(12);
+
+  h2 {
+    color: $blue;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.85em;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  @include breakpoint(medium) {
+    @include flex-grid-column(6);
+
+    h2 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 0.95em;
+    }
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-column(6);
+
+    h2 {
+      font-size: 2.75em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  }
+>>>>>>> 87a3f7697646af4d9b0be33faa9b5cfbcfa55fbc
 }
 
 .link {
@@ -164,6 +223,7 @@
 	transition: all 0.2s linear;
 	background: $blue;
 }
+<<<<<<< HEAD
 
 .seeWhoWeAreButton span::before,
 .seeWhoWeAreButton span::after {
@@ -203,3 +263,5 @@
 	bottom: 0;
 	transition-duration: 0.4s;
 }
+=======
+>>>>>>> 87a3f7697646af4d9b0be33faa9b5cfbcfa55fbc

@@ -38,18 +38,18 @@ export default class AnimatedStats extends Component {
     const { employeeNum, employeeDiv, expNum, expDiv, valueNum, valueDiv, percentNum, percentDiv, tweenObject } = this
     const { employees, experience, value, percent } = this.finalState
     this.animation = new TimelineMax({ paused: true, onUpdate: this.onUpdate })
-      .fromTo(tweenObject, 2, { employees: 0 }, { employees, roundProps: 'employees', ease: Power0.easeNone })
+      .fromTo(tweenObject, 0.4, { employees: 0 }, { employees, roundProps: 'employees', ease: Power0.easeNone })
       .fromTo(employeeDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 0)
-      .fromTo(employeeNum, 2, { scale: 0 }, { scale: 1 }, 0)
-      .fromTo(tweenObject, 2, { experience: 0 }, { experience, roundProps: 'experience', ease: Power0.easeNone }, 1)
-      .fromTo(expDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 1)
-      .fromTo(expNum, 2, { scale: 0 }, { scale: 1 }, 1)
-      .fromTo(tweenObject, 2, { value: 0 }, { value, ease: Power0.easeNone }, 1.5)
-      .fromTo(valueDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 1.5)
-      .fromTo(valueNum, 2, { scale: 0 }, { scale: 1 }, 1.5)
-      .fromTo(tweenObject, 2, { percent: 0 }, { percent, roundProps: 'percent', ease: Power0.easeNone }, 2)
-      .fromTo(percentDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 2)
-      .fromTo(percentNum, 2, { scale: 0 }, { scale: 1 }, 2)
+      .fromTo(employeeNum, 0.4, { scale: 0 }, { scale: 1 }, 0)
+      .fromTo(tweenObject, 0.4, { experience: 0 }, { experience, roundProps: 'experience', ease: Power0.easeNone }, 0.5)
+      .fromTo(expDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 0.5)
+      .fromTo(expNum, 0.4, { scale: 0 }, { scale: 1 }, 0.5)
+      .fromTo(tweenObject, 0.4, { value: 0 }, { value, ease: Power0.easeNone }, 1)
+      .fromTo(valueDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 1)
+      .fromTo(valueNum, 0.4, { scale: 0 }, { scale: 1 }, 1)
+      .fromTo(tweenObject, 0.4, { percent: 0 }, { percent, roundProps: 'percent', ease: Power0.easeNone }, 1.5)
+      .fromTo(percentDiv, 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0 }, 1.5)
+      .fromTo(percentNum, 0.4, { scale: 0 }, { scale: 1 }, 1.5)
 
     this.scene = new Scene({ triggerElement: this.node, triggerHook: 0.4 })
     this.scene.indicatorName = 'AnimatedStates'
@@ -88,7 +88,7 @@ export default class AnimatedStats extends Component {
               <div className={styles.quadrant} ref={c => { this.valueDiv = c }}>
                 <div className={styles.content}>
                   <span className={styles.number} ref={c => { this.valueNum = c }}><span className={styles.subText}><sup>$</sup></span>{round(value, 1)}<span className={styles.subText}>B</span></span><span className={styles.sign}>+</span><br />
-                  <span className={styles.text}>Value of total properties built each year</span>
+                  <span className={styles.text}>Total managed work</span>
                 </div>
               </div>
               <div className={styles.quadrant} ref={c => { this.percentDiv = c }}>

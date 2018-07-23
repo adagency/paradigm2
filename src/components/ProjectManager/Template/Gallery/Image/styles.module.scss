@@ -77,14 +77,21 @@
   background-size: cover;
   height: 100%;
   left: 0;
-  opacity: 0.92;
+  // opacity: 0.92;
   overflow: hidden;
   position: absolute;
   top: 0;
   transform: translateZ(0);
-  transition: transform 5s, opacity 1s;
+  // transition: transform 5s, opacity 1s;
   visibility: visible;
   width: 100%;
   will-change: transform;
   z-index: 0;
+  animation-name: example;
+  animation-duration: 6s;
+}
+
+@keyframes example {
+    from {opacity: .25;}
+    to {opacity: 1}
 }
