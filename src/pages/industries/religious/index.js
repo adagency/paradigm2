@@ -18,7 +18,7 @@ export default function ReligiousPage({ data }) {
       />
       <Banner sizes={data.bannerImage.sizes}>
         <h2>
-          Construction of Churches & Religious Centers.<br />
+          Building religious institutions with a unique character<br />
         </h2>
       </Banner>
       <div className={styles.wrapper}>
@@ -27,10 +27,20 @@ export default function ReligiousPage({ data }) {
           <Col size='two-third'>
             <AnimScroll>
               <p>
-                We realize that each or our clients projects is unique, requiring the highest level of attention to detail and quality, to which Paradigm’s church building team is more than qualified. We begin by collaborating with you and your committee members not only in regards to budgets, timelines and scheduling in all phases of construction, but also with phases of our project plan to keep your activities running smoothly with little to no noise disruptions.
+                We realize that each or our clients projects is unique, requiring the highest
+                level of attention to detail and quality, to which Paradigm’s church building
+                team is more than qualified. We begin by collaborating with you and your
+                committee members not only in regards to budgets, timelines and
+                scheduling in all phases of construction, but also with phases of our project
+                plan to keep your activities running smoothly with little to no noise
+                disruptions.
               </p>
               <p>
-                 We strive for a full understanding of your vision whether its building a new place of worship entirely or a renovation or expansion of an existing religious institution. This gained knowledge not only allows us to build a well-designed facility, but also one that is unique to you, your personality and your ministry.
+                We strive for a full understanding of your vision whether its building a new
+                place of worship entirely or a renovation or expansion of an existing
+                religious institution. This gained knowledge not only allows us to build a
+                well-designed facility, but also one that is unique to you, your personality
+                and your ministry.
               </p>
             </AnimScroll>
           </Col>

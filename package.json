@@ -80,6 +80,7 @@
 	"license": "MIT",
 	"main": "n/a",
 	"scripts": {
+		"heroku-postbuild": "gatsby build",
 		"start": "gatsby develop -p 3000",
 		"serve": "http-server ./public -p 8000",
 		"build": "gatsby build && npm run build:post",
