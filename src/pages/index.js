@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Helmet from 'components/Helmet';
 import Slider, { Slide } from 'components/Slider';
+
 import Intro from 'components/HomeSections/Intro';
 import Projects from 'components/HomeSections/Projects';
+import Leaders from 'components/HomeSections/Leaders';
+import WhoWeAre from 'components/HomeSections/WhoWeAre';
 import ContactCTA from 'components/ContactCTA';
 
 export default class HomePage extends Component {
@@ -12,14 +15,20 @@ export default class HomePage extends Component {
 			positionY: 0,
 
 			shouldAnimateProjects: false,
-			isProjectsAnimated: false
+			isProjectsAnimated: false,
+			shouldAnimateLeaders: false,
+			isLeadersAnimated: false,
+			shouldAnimateWhoWeAre: false,
+			isWhoWeAreAnimated: false
 		};
 	}
 	componentDidMount() {
+		document.body.style.overflowX = 'hidden';
 		window.addEventListener('scroll', this.handleScroll);
 	}
 
 	componentWillUnmount() {
+		document.body.style.overflowX = 'auto';
 		window.removeEventListener('scroll', this.handleScroll);
 	}
 
@@ -32,11 +41,31 @@ export default class HomePage extends Component {
 				this.setState({ isProjectsAnimated: true });
 			});
 		}
+
+		if (this.leaders.state.sectionPosition / 1.5 <= positionY) {
+			this.setState({ shouldAnimateLeaders: true }, () => {
+				this.setState({ isLeadersAnimated: true });
+			});
+		}
+
+		if (this.whoWeAre.state.sectionPosition / 1.5 <= positionY) {
+			this.setState({ shouldAnimateWhoWeAre: true }, () => {
+				this.setState({ isWhoWeAreAnimated: true });
+			});
+		}
 	};
 
 	render() {
 		const { data } = this.props;
-		const { positionY, shouldAnimateProjects, isProjectsAnimated } = this.state;
+		const {
+			positionY,
+			shouldAnimateProjects,
+			isProjectsAnimated,
+			shouldAnimateLeaders,
+			isLeadersAnimated,
+			shouldAnimateWhoWeAre,
+			isWhoWeAreAnimated
+		} = this.state;
 		return (
 			<main>
 				<Helmet
@@ -52,10 +81,10 @@ export default class HomePage extends Component {
 					]}>
 					<h2>Building To A Higher Standard.</h2>
 					<p>
-						Paradigm Construction is a full-service construction company
-						headquartered in The Woodlands, TX with broad experience that spans
-						across multiple industries. We don’t just say “quality,” we
-						implement and execute it in every project.
+						Paradigm Construction is a Commercial General Contractor
+						headquartered in The Woodlands, TX. Our commitment to Honesty,
+						Integrity, and Quality drive our passion for Construction in the
+						South Texas Region.
 					</p>
 				</Intro>
 				<Projects
@@ -74,6 +103,41 @@ export default class HomePage extends Component {
 						clients' most complex and unique goals.
 					</p>
 				</Projects>
+				<Leaders
+					sizes={data.leadershipSlide.sizes}
+					ref={leaders => (this.leaders = leaders)}
+					shouldIRender={shouldAnimateLeaders}
+					animated={isLeadersAnimated}>
+					<h2>
+						Award-winning Personnel.<br />
+						Award-winning work.
+					</h2>
+					<p>
+						Our mission is to provide value in our partnerships. We build trust
+						by providing honest, straightforward solutions not only for our
+						clients’ but <strong>WITH</strong> our clients. Seeking out projects
+						that push our limits and challenge us every step of the way,
+						produces award-winning projects that are an extension of who we are.
+						If you envision it, we can build it.
+					</p>
+				</Leaders>
+				<WhoWeAre
+					ref={whoWeAre => (this.whoWeAre = whoWeAre)}
+					shouldIRender={shouldAnimateWhoWeAre}
+					animated={isWhoWeAreAnimated}>
+					<h2>
+						Going Beyond<br />
+						General contracting.
+					</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+						tincidunt, neque et eleifend consequat, turpis lorem vehicula
+						sapien, quis laoreet ante lacus id nibh. Class aptent taciti
+						sociosqu ad litora torquent per conubia nostra, per inceptos
+						himenaeos. Nullam non tristique lorem.
+					</p>
+				</WhoWeAre>
+				<ContactCTA />
 			</main>
 		);
 	}
