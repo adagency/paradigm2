@@ -131,7 +131,7 @@ export default class ContactCTA extends Component {
 		};
 		const gap = 7;
 		return (
-			<div className={styles.wrapper} onMouseMove={this.handleMouseMove}>
+			<div className={styles.wrapper} onWheel={this.handleMouseMove}>
 				<div
 					className={styles.background}
 					style={style}
@@ -170,7 +170,7 @@ export default class ContactCTA extends Component {
 										this.list = c;
 									}}>
 									<li className={styles.item}>
-										<Button to="/contact">Service Inquiries</Button>
+										<Button to="/contact">Become a Client</Button>
 									</li>
 									<li className={styles.item}>
 										<Button to="/subcontractors">Become a Contractor</Button>

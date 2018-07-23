@@ -61,12 +61,12 @@ export default class ProjectsSlide extends Component {
 		TweenMax.staggerFromTo(
 			this.container.children,
 			1,
-			{ opacity: 0, y: 25 },
+			{ opacity: 0, y: 0 },
 			{ opacity: 1, y: 0 },
 			0.25
 		);
 
-		TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: -15 }, 0.15, 0.1);
+		TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: 0 }, 0.15, 0.1);
 	};
 
 	render() {
