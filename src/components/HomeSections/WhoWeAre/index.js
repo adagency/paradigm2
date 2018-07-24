@@ -22,7 +22,8 @@ export default class WhoWeAreSlide extends Component {
 		this.state = {
 			sectionPosition: 0,
 			timesAnimated: 0,
-			onEntering: false
+			onEntering: false,
+			width: window.innerWidth
 		};
 	}
 
@@ -52,8 +53,43 @@ export default class WhoWeAreSlide extends Component {
 		this.animation.pause(0);
 	};
 
+	renderInfoBox(shouldIRender, children) {
+		return (
+			<div>
+				{shouldIRender && children}
+				{shouldIRender && (
+					<div style={{ textAlign: 'center' }}>
+						<Link className={styles.link} to="/about">
+							<button className={styles.seeWhoWeAreButton}>
+								<span>- See Who we are</span>
+							</button>
+						</Link>
+					</div>
+				)}
+			</div>
+		);
+	}
+
+	renderImage(shouldIRender) {
+		return (
+			<div>
+				{shouldIRender && (
+					<div
+						className={styles.imageWrapper}
+						ref={c => {
+							this.imageWrapper = c;
+						}}>
+						<img src={briley} />
+					</div>
+				)}
+			</div>
+		);
+	}
+
 	render() {
 		const { children, shouldIRender } = this.props;
+		const { width } = this.state;
+
 		return (
 			<div
 				className={styles.wrapper}
@@ -72,27 +108,14 @@ export default class WhoWeAreSlide extends Component {
 						ref={c => {
 							this.container = c;
 						}}>
-						{shouldIRender && children}
-						{shouldIRender && (
-							<div style={{ textAlign: 'center' }}>
-								<Link className={styles.link} to="/about">
-									<button className={styles.seeWhoWeAreButton}>
-										<span>- See Who we are</span>
-									</button>
-								</Link>
-							</div>
-						)}
+						{width > 639
+							? this.renderInfoBox(shouldIRender, children)
+							: this.renderImage(shouldIRender)}
 					</div>
 					<div className={styles.right}>
-						{shouldIRender && (
-							<div
-								className={styles.imageWrapper}
-								ref={c => {
-									this.imageWrapper = c;
-								}}>
-								<img src={briley} />
-							</div>
-						)}
+						{width > 639
+							? this.renderImage(shouldIRender)
+							: this.renderInfoBox(shouldIRender, children)}
 					</div>
 				</div>
 			</div>

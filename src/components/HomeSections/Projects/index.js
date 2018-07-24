@@ -39,7 +39,8 @@ export default class ProjectsSlide extends Component {
 		this.state = {
 			sectionPosition: 0,
 			timesAnimated: 0,
-			onEntering: false
+			onEntering: false,
+			width: window.innerWidth
 		};
 	}
 
@@ -66,11 +67,60 @@ export default class ProjectsSlide extends Component {
 			0.25
 		);
 
-		TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: -15 }, 0.15, 0.1);
+		TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: 0 }, 0.15, 0.1);
 	};
+
+	renderImageWrapper() {
+		return (
+			<div
+				className={styles.imageWrapper}
+				ref={c => {
+					this.imageWrapper = c;
+				}}>
+				{/*<SVGHouse />*/}
+				<img src={part1} />
+				<img src={part2} />
+				<img src={part3} />
+				<img src={part4} />
+				<img src={part5} />
+				<img src={part7} />
+				<img src={part8} />
+				<img src={part9} />
+				<img src={part10} />
+				<img src={part11} />
+				<img src={part12} />
+				<img src={part13} />
+				<img src={part14} />
+				<img src={part15} />
+				<img src={part16} />
+				<img src={part17} />
+				<img src={part18} />
+				<img src={part19} />
+				<img src={part20} />
+				<img src={part21} />
+				<img src={part22} />
+			</div>
+		);
+	}
+
+	renderProjectsInfo(children) {
+		return (
+			<div>
+				{children}
+				<div style={{ textAlign: 'right' }}>
+					<Link className={styles.link} to="/projects#">
+						<button className={styles.viewOurProjectsButton}>
+							<span>- View Our Projects</span>
+						</button>
+					</Link>
+				</div>
+			</div>
+		);
+	}
 
 	render() {
 		const { children, shouldIRender } = this.props;
+		const { width } = this.state;
 		return (
 			<div
 				className={styles.wrapper}
@@ -86,48 +136,18 @@ export default class ProjectsSlide extends Component {
 				{shouldIRender && (
 					<div className={styles.container}>
 						<div className={styles.right}>
-							<div
-								className={styles.imageWrapper}
-								ref={c => {
-									this.imageWrapper = c;
-								}}>
-								{/*<SVGHouse />*/}
-								<img src={part1} />
-								<img src={part2} />
-								<img src={part3} />
-								<img src={part4} />
-								<img src={part5} />
-								<img src={part7} />
-								<img src={part8} />
-								<img src={part9} />
-								<img src={part10} />
-								<img src={part11} />
-								<img src={part12} />
-								<img src={part13} />
-								<img src={part14} />
-								<img src={part15} />
-								<img src={part16} />
-								<img src={part17} />
-								<img src={part18} />
-								<img src={part19} />
-								<img src={part20} />
-								<img src={part21} />
-								<img src={part22} />
-							</div>
+							{width > 639
+								? this.renderImageWrapper()
+								: this.renderProjectsInfo(children)}
 						</div>
 						<div
 							className={styles.content}
 							ref={c => {
 								this.container = c;
 							}}>
-							{children}
-							<div style={{ textAlign: 'right' }}>
-								<Link className={styles.link} to="/projects#">
-									<button className={styles.viewOurProjectsButton}>
-										<span>- View Our Projects</span>
-									</button>
-								</Link>
-							</div>
+							{width > 639
+								? this.renderProjectsInfo(children)
+								: this.renderImageWrapper()}
 						</div>
 					</div>
 				)}
