@@ -79,7 +79,7 @@
 	}
 
 	@include breakpoint(medium) {
-		@include flex-grid-column(6);
+		@include flex-grid-column(5);
 
 		h2 {
 			color: #fff;
@@ -92,7 +92,7 @@
 	}
 
 	@include breakpoint(large) {
-		@include flex-grid-column(6);
+		@include flex-grid-column(5);
 
 		h2 {
 			font-size: 2.75em;
@@ -126,7 +126,7 @@
 	text-align: center;
 
 	@include breakpoint(medium) {
-		@include flex-grid-column(6);
+		@include flex-grid-column(7);
 		max-width: none;
 	}
 

@@ -24,10 +24,6 @@
       color: $white;
       text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
       transition: color 5s, text-shadow 5s;
-
-      & span {
-        animation: fade-in 0.2s 2 backwards alternate;
-      }
     }
 
     .background {
@@ -111,7 +107,6 @@
     opacity: 0.75;
     position: relative;
     text-transform: uppercase;
-    transition: 0.5s opacity ease-in-out;
 
     &:before {
       border-bottom: 1px solid $grey;
@@ -131,7 +126,6 @@
       right: 0;
       transform: scaleX(0);
       transform-origin: left;
-      transition: 0.5s transform ease-in-out;
     }
   }
 
@@ -200,7 +194,7 @@
 	background: none;
 	border: none;
 	cursor: pointer;
-	color: $white;
+  color: $white;
 	font-family: $header-font-family;
 	font-size: 1em;
 	font-weight: 200;
