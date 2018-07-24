@@ -193,3 +193,72 @@
   from, to { border-color: transparent }
 
 }
+
+.viewOurProjectsButton {
+	display: inline-block;
+	position: relative;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: $white;
+	font-family: $header-font-family;
+	font-size: 1em;
+	font-weight: 200;
+
+	@include breakpoint(medium) {
+		font-size: 1.2em;
+	}
+}
+.viewOurProjectsButton span {
+	display: block;
+	padding: 15px 30px 20px 30px;
+}
+
+.viewOurProjectsButton::before,
+.viewOurProjectsButton::after {
+	content: '';
+	width: 0;
+	height: 2px;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: $white;
+}
+
+.viewOurProjectsButton span::before,
+.viewOurProjectsButton span::after {
+	content: '';
+	width: 2px;
+	height: 0;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: $white;
+}
+.viewOurProjectsButton:hover::before,
+.viewOurProjectsButton:hover::after {
+	width: 100%;
+}
+.viewOurProjectsButton:hover span::before,
+.viewOurProjectsButton:hover span::after {
+	height: 100%;
+}
+
+.viewOurProjectsButton::after {
+	left: 0;
+	bottom: 0;
+	transition-duration: 0.4s;
+}
+.viewOurProjectsButton span::after {
+	right: 0;
+	top: 0;
+	transition-duration: 0.4s;
+}
+.viewOurProjectsButton::before {
+	right: 0;
+	top: 0;
+	transition-duration: 0.4s;
+}
+.viewOurProjectsButton span::before {
+	left: 0;
+	bottom: 0;
+	transition-duration: 0.4s;
+}
