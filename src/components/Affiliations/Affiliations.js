@@ -6,7 +6,7 @@ import { Row, Col } from 'components/Content'
 
 export default function Affiliations({ children }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper}>      
       <Row>
         <Col>
           <h3 className={styles.heading}>Our Affiliations:</h3>
