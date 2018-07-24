@@ -23,8 +23,14 @@ export default class WhoWeAreSlide extends Component {
 			sectionPosition: 0,
 			timesAnimated: 0,
 			onEntering: false,
-			width: window.innerWidth
+			width: 0
 		};
+	}
+
+	componentDidMount() {
+		this.setState({
+			width: window.innerWidth
+		});
 	}
 
 	componentDidUpdate() {
