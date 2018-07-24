@@ -33,7 +33,7 @@
 }
 
 .list {
-	align-items: flex-start;
+	align-items: flex-end;
 	display: flex;
 	flex-direction: column;
 	height: calc(100% - #{$nav-height});

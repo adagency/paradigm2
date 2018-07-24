@@ -129,13 +129,6 @@ export default class HomePage extends Component {
 						Going Beyond<br />
 						General contracting.
 					</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-						tincidunt, neque et eleifend consequat, turpis lorem vehicula
-						sapien, quis laoreet ante lacus id nibh. Class aptent taciti
-						sociosqu ad litora torquent per conubia nostra, per inceptos
-						himenaeos. Nullam non tristique lorem.
-					</p>
 				</WhoWeAre>
 				<ContactCTA />
 			</main>
