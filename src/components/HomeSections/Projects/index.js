@@ -45,9 +45,11 @@ export default class ProjectsSlide extends Component {
 	}
 
 	componentDidMount() {
-		this.setState({
-			width: window.innerWidth
-		});
+		if (window) {
+			this.setState({
+				width: window.innerWidth
+			});
+		}
 	}
 
 	componentDidUpdate() {
