@@ -25,7 +25,9 @@ export default class Card extends Component {
             }
           </h3>
           <p>{content.data.location}</p>
-          <p className={styles.p}>View</p>
+          <button className={styles.viewOurProjectsButton}>
+            <span>View</span>
+          </button>
         </div>
       </Link>
     )

@@ -21,8 +21,12 @@ export default class ContactCTA extends Component {
 
 	state = {
 		current: this.testimony,
+		isScrollingDown: false,
 		x: 0,
-		y: 0
+		y: 0,
+		top: 0,
+		bottom: 0,
+		degrees: ['-40%', '-55%']
 	};
 
 	componentDidMount() {
@@ -110,13 +114,36 @@ export default class ContactCTA extends Component {
 	}
 
 	handleMouseMove = event => {
-		this.setState({ x: event.clientX, y: event.clientY });
+		const { x, y, bottom, top, degrees } = this.state;
+
+		let isScrollingDown = false;
+
+		/*TweenMax.to(this.svg, 2, {
+			css: { transform: 'translate(-40%, -55%) rotate(35deg)' },
+			css: { transform: 'translate(-40%, -55%) rotate(80deg)' }
+		});*/
+
+		if (this.wrapper.getBoundingClientRect().top < top) {
+			//scrolling up
+			isScrollingDown = true;
+			/*	this.svg.style.transform = `translate(${degrees[0]}, ${
+				degrees[1]
+			}) rotate(35deg)`;*/
+		}
+
+		this.setState({
+			x: this.wrapper.getBoundingClientRect().x,
+			y: this.wrapper.getBoundingClientRect().y,
+			top: this.wrapper.getBoundingClientRect().top,
+			bottom: this.wrapper.getBoundingClientRect().bottom,
+			isScrollingDown
+		});
 	};
 
 	getClassnames() {
-		const { x, y } = this.state;
+		const { isScrollingDown } = this.state;
 
-		if (x > y) {
+		if (!isScrollingDown) {
 			return cx(styles.svg, styles.svgLeftRotation);
 		} else {
 			return cx(styles.svg, styles.svgRightRotation);
@@ -131,7 +158,10 @@ export default class ContactCTA extends Component {
 		};
 		const gap = 7;
 		return (
-			<div className={styles.wrapper} onMouseMove={this.handleMouseMove}>
+			<div
+				className={styles.wrapper}
+				onWheel={this.handleMouseMove}
+				ref={wrapper => (this.wrapper = wrapper)}>
 				<div
 					className={styles.background}
 					style={style}
@@ -170,7 +200,7 @@ export default class ContactCTA extends Component {
 										this.list = c;
 									}}>
 									<li className={styles.item}>
-										<Button to="/contact">Service Inquiries</Button>
+										<Button to="/contact">Become a Client</Button>
 									</li>
 									<li className={styles.item}>
 										<Button to="/subcontractors">Become a Contractor</Button>

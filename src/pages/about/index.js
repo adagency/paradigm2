@@ -6,6 +6,7 @@ import AnimScroll from 'components/AnimationScroll'
 import Content, { Col } from 'components/Content'
 import Industries from 'components/Industries'
 import AnimatedStats from 'components/AnimatedStats'
+import background from './stats-bg.jpg'
 import Affiliations from 'components/Affiliations'
 
 import styles from './styles.module.scss'
@@ -55,8 +56,10 @@ export default function AboutPage({ data }) {
           </Col>
         </Content>
       </div>
-      <AnimatedStats />
-      <Affiliations />
+      <div style={{backgroundImage: "url(" + background + ")", backgroundSize: 'cover'}}>
+        <AnimatedStats />
+        <Affiliations />
+      </div>
       <Industries />
     </main>
   )

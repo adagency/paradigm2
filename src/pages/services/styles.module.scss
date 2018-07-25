@@ -46,8 +46,15 @@
 }
 
 .title {
-  padding-left: 55px;
+  padding-left:64px;
+  color: #75B0EA !important;
+  font-size: 24px;
   position: relative;
+
+  @include breakpoint(medium){
+    font-size: 48px;
+    padding-left: 140px;
+  }
 }
 
 .imgContainer {
@@ -55,5 +62,17 @@
   position: absolute;
   top: 50%;
   transform: translate(-20px, -50%);
-  width: 45px;
+  width: 56px;
+
+  @include breakpoint(medium){
+    width: 111px;
+  }
+}
+
+.paragraph{
+  padding-left:0;
+
+  @include breakpoint(medium){
+    padding-left: 142px;
+  }
 }

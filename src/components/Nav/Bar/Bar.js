@@ -24,6 +24,11 @@ export default class Bar extends PureComponent {
 		return (
 			<Headroom {...this.settings}>
 				<div className={styles.container}>
+					<div className={styles.responsiveLeft}>
+						<Link to="/" className={styles.logoLink}>
+							<img src={logo} alt="logo" className="hover-effect" />
+						</Link>
+					</div>
 					<div className={styles.left}>
 						<Link to="/">Home</Link>
 						<Link to="/projects#">Projects</Link>
