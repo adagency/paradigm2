@@ -56,4 +56,17 @@
   top: 50%;
   transform: translate(-20px, -50%);
   width: 45px;
+
+}
+
+.img {
+  width: 100%;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
