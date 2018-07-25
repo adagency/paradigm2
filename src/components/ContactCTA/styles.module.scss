@@ -9,8 +9,8 @@ $saturated-primary: saturate($primary, 45);
 	width: 100%;
 	z-index: 0;
 
-	@include breakpoint(medium){
-		height:100vh;
+	@include breakpoint(medium) {
+		height: 100vh;
 	}
 
 	&:before {
@@ -32,7 +32,6 @@ $saturated-primary: saturate($primary, 45);
 }
 
 .container {
-	
 	padding: 0;
 
 	@include breakpoint(medium) {
@@ -63,22 +62,22 @@ $saturated-primary: saturate($primary, 45);
 }
 
 @keyframes rotateRight {
-	from {
+	0% {
 		transform: translate(-40%, -55%) rotate(35deg);
 	}
 
-	to {
+	100% {
 		transform: translate(-40%, -55%) rotate(80deg);
 	}
 }
 
 @keyframes rotateLeft {
-	from {
-		transform: translate(-40%, -55%) rotate(80deg);
+	0% {
+		transform: translate(-40%, -55%) rotate(35deg);
 	}
 
-	to {
-		transform: translate(-40%, -55%) rotate(35deg);
+	100% {
+		transform: translate(-40%, -55%) rotate(80deg);
 	}
 }
 
@@ -179,7 +178,8 @@ $saturated-primary: saturate($primary, 45);
 	margin: 0;
 }
 
-.item, .button {
+.item,
+.button {
 	font-size: 24px;
 	margin: 5px 0;
 
@@ -205,5 +205,4 @@ $saturated-primary: saturate($primary, 45);
 }
 
 .link {
-	
 }
