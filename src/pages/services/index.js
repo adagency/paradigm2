@@ -13,8 +13,13 @@ import postConstruction from './postconstruction-icon.png'
 import preConstruction from './preconstruction-icon.png'
 import safety from './safety-icon.png'
 import scheduling from './scheduling-icon.png'
+
+import bimModeling from './bim-icon.png'
+import deliveryMethods from './delivery-icons.png'
+
 import bim from './bim-icon.png'
 import delivery from './delivery-icons.png'
+
 
 export default function ServicesPage({ data }) {
   return (
@@ -33,14 +38,21 @@ export default function ServicesPage({ data }) {
           <Blueprint svg='Services' />
         </div>
         <Content padding='medium'>
+          <AnimScroll types='fadeIn'>
           <Col size='two-third'>
-            <AnimScroll>
+
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
-                  <span className={styles.imgContainer}>
+                <span className={styles.imgContainer}>
+                  <AnimScroll types='rotation' duration={1}>
                     <img src={preConstruction} className={styles.img} alt='Pre-construction' />
-                  </span>
-                Pre-construction
+                  </AnimScroll>
+                </span>
+                  Pre-construction
               </h3>
+            </AnimScroll>
+            <AnimScroll types='fadeIn'>
               <p className={styles.paragraph}>
                 We are not just contractors, we are your collaborative partners. Our
                 pre-construction phase involves design with our architects, and
@@ -48,12 +60,20 @@ export default function ServicesPage({ data }) {
                 logistics prior to start up, ensuring that everything moves as smoothly
                 as possible.
               </p>
+            </AnimScroll>
+
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
-                  <img src={scheduling} className={styles.img} alt='Scheduling' />
+                  <AnimScroll types='rotation' duration={1}>
+                    <img src={scheduling} className={styles.img} alt='Scheduling' />
+                  </AnimScroll>
                 </span>
                 Scheduling
               </h3>
+            </AnimScroll>
+            <AnimScroll types='fadeIn'>
               <p className={styles.paragraph}>
                 We employ strict scheduling - from site analysis to product selections
                 and purchasing, and design efficiencies, we’ll take care of every
@@ -61,26 +81,39 @@ export default function ServicesPage({ data }) {
                 defined through pre construction, reliable project schedules are met
                 at every level. Unquestionably everything matters.
               </p>
+            </AnimScroll>
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
-                  <img src={safety} className={styles.img} alt='Safety' />
+                  <AnimScroll types='rotation' duration={1}>
+                    <img src={safety} className={styles.img} alt='Safety' />
+                  </AnimScroll>
                 </span>
                 Safety
               </h3>
-              <p className={styles.paragraph}>
-                Paradigms commitment to safety is unparalleled. We develop a
-                comprehensive safety plan for the entire project, with the client,
-                before we even break ground. This plan includes thorough inspection
-                processes, daily evaluations and ongoing training for our
-                superintendents to ensure that our employees, subcontractors and
-                our clients go home safely every day.
-              </p>
+            </AnimScroll>
+            <p className={styles.paragraph}>
+              Paradigms commitment to safety is unparalleled. We develop a
+              comprehensive safety plan for the entire project, with the client,
+              before we even break ground. This plan includes thorough inspection
+              processes, daily evaluations and ongoing training for our
+              superintendents to ensure that our employees, subcontractors and
+              our clients go home safely every day.
+            </p>
+
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
-                  <img src={postConstruction} className={styles.img} alt='Post-scheduling' />
+                  <AnimScroll types='rotation' duration={1}>
+                    <img src={postConstruction} className={styles.img} alt='Post-scheduling' />
+                  </AnimScroll>
                 </span>
                 Post-Construction
               </h3>
+            </AnimScroll>
+            <AnimScroll types='fadeIn'>
               <p className={styles.paragraph}>
                 Your goals are our goals. It takes supreme knowledge of complex
                 construction methods and a methodical approach to hold each team
@@ -99,12 +132,19 @@ export default function ServicesPage({ data }) {
                 <li>Project Close- Out</li>
               </ul>
               <br/>
+            </AnimScroll>
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
-                  <img src={bim} className={styles.img} alt='Safety' />
+                  <AnimScroll types='rotation' duration={1}>
+                    <img src={bim} className={styles.img} alt='Safety' />
+                  </AnimScroll>
                 </span>
                 BIM Modeling
               </h3>
+            </AnimScroll>
+            <AnimScroll types='fadeIn'>
               <p className={styles.paragraph}>
                 BIM otherwise known as Building information modeling involves more
                 than just 3D design, it is the process of creating and managing all
@@ -114,12 +154,19 @@ export default function ServicesPage({ data }) {
                 process.
               </p>
               <br/>
+            </AnimScroll>
+
+            <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
-                  <img src={delivery} className={styles.img} alt='Safety' />
+                  <AnimScroll types='rotation' duration={1}>
+                    <img src={delivery} className={styles.img} alt='Safety' />
+                  </AnimScroll>
                 </span>
                 Delivery Methods
               </h3>
+            </AnimScroll>
+            <AnimScroll types='fadeIn'>
               <p className={styles.paragraph}>
                 Our delivery methods help to reduce risk as well as keep the project
                 on time and budget. Discussing the projects needs and specific
@@ -135,7 +182,9 @@ export default function ServicesPage({ data }) {
                 <li>Fee with Negotiated GMP</li>
               </ul>
             </AnimScroll>
+
           </Col>
+          </AnimScroll>
         </Content>
       </div>
       <Industries />
