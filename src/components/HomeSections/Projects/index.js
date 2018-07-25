@@ -68,7 +68,7 @@ export default class ProjectsSlide extends Component {
 		TweenMax.staggerFromTo(
 			this.container.children,
 			1,
-			{ opacity: 0, y: 25 },
+			{ opacity: 0, y: 0 },
 			{ opacity: 1, y: 0 },
 			0.25
 		);

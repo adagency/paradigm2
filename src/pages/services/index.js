@@ -13,8 +13,13 @@ import postConstruction from './postconstruction-icon.png'
 import preConstruction from './preconstruction-icon.png'
 import safety from './safety-icon.png'
 import scheduling from './scheduling-icon.png'
+
 import bimModeling from './bim-icon.png'
 import deliveryMethods from './delivery-icons.png'
+
+import bim from './bim-icon.png'
+import delivery from './delivery-icons.png'
+
 
 export default function ServicesPage({ data }) {
   return (
@@ -48,13 +53,13 @@ export default function ServicesPage({ data }) {
               </h3>
             </AnimScroll>
             <AnimScroll types='fadeIn'>
-            <p>
-              We are not just contractors, we are your collaborative partners. Our
-              pre-construction phase involves design with our architects, and
-              evaluations of the project so that we can coordinate all timelines and
-              logistics prior to start up, ensuring that everything moves as smoothly
-              as possible.
-            </p>
+              <p className={styles.paragraph}>
+                We are not just contractors, we are your collaborative partners. Our
+                pre-construction phase involves design with our architects, and
+                evaluations of the project so that we can coordinate all timelines and
+                logistics prior to start up, ensuring that everything moves as smoothly
+                as possible.
+              </p>
             </AnimScroll>
 
 
@@ -69,7 +74,7 @@ export default function ServicesPage({ data }) {
               </h3>
             </AnimScroll>
             <AnimScroll types='fadeIn'>
-              <p>
+              <p className={styles.paragraph}>
                 We employ strict scheduling - from site analysis to product selections
                 and purchasing, and design efficiencies, we’ll take care of every
                 detail and are with you at every step. When the project is clearly
@@ -88,16 +93,15 @@ export default function ServicesPage({ data }) {
                 Safety
               </h3>
             </AnimScroll>
-            <AnimScroll types='fadeIn'>
-              <p>
-                Paradigms commitment to safety is unparalleled. We develop a
-                comprehensive safety plan for the entire project, with the client,
-                before we even break ground. This plan includes thorough inspection
-                processes, daily evaluations and ongoing training for our
-                superintendents to ensure that our employees, subcontractors and
-                our clients go home safely every day.
-              </p>
-            </AnimScroll>
+            <p className={styles.paragraph}>
+              Paradigms commitment to safety is unparalleled. We develop a
+              comprehensive safety plan for the entire project, with the client,
+              before we even break ground. This plan includes thorough inspection
+              processes, daily evaluations and ongoing training for our
+              superintendents to ensure that our employees, subcontractors and
+              our clients go home safely every day.
+            </p>
+
 
             <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
@@ -110,14 +114,14 @@ export default function ServicesPage({ data }) {
               </h3>
             </AnimScroll>
             <AnimScroll types='fadeIn'>
-              <p>
+              <p className={styles.paragraph}>
                 Your goals are our goals. It takes supreme knowledge of complex
                 construction methods and a methodical approach to hold each team
                 member accountable throughout the construction process. Your
                 project isn't complete until every last detail is achieved.
               </p>
-              <h4>Our post-construction services include: </h4>
-              <ul>
+              <h4 className={styles.paragraph}>Our post-construction services include: </h4>
+              <ul className={styles.paragraph}>
                 <li>Operation and Maintenance manual development</li>
                 <li>As-Built Drawing documentation</li>
                 <li>Lien Waivers/Releases settlement</li>
@@ -134,14 +138,14 @@ export default function ServicesPage({ data }) {
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
                   <AnimScroll types='rotation' duration={1}>
-                    <img src={bimModeling} className={styles.img} alt='Post-scheduling' />
+                    <img src={bim} className={styles.img} alt='Safety' />
                   </AnimScroll>
                 </span>
                 BIM Modeling
               </h3>
             </AnimScroll>
             <AnimScroll types='fadeIn'>
-              <p>
+              <p className={styles.paragraph}>
                 BIM otherwise known as Building information modeling involves more
                 than just 3D design, it is the process of creating and managing all
                 project information from before, during, and after construction.
@@ -149,27 +153,28 @@ export default function ServicesPage({ data }) {
                 before they arise, and to monitor productivity of the construction
                 process.
               </p>
+              <br/>
             </AnimScroll>
 
             <AnimScroll types='slidein' duration={1}>
               <h3 className={styles.title}>
                 <span className={styles.imgContainer}>
                   <AnimScroll types='rotation' duration={1}>
-                    <img src={deliveryMethods} className={styles.img} alt='Post-scheduling' />
+                    <img src={delivery} className={styles.img} alt='Safety' />
                   </AnimScroll>
                 </span>
                 Delivery Methods
               </h3>
             </AnimScroll>
             <AnimScroll types='fadeIn'>
-              <p>
+              <p className={styles.paragraph}>
                 Our delivery methods help to reduce risk as well as keep the project
                 on time and budget. Discussing the projects needs and specific
                 situations with our clients before startup ensures that we have all
                 details aligned, goals are met, and quality remains superior.
               </p>
-              <h5>Our Delivery Methods include:</h5>
-              <ul>
+              <h5 className={styles.paragraph}>Our Delivery Methods include:</h5>
+              <ul className={styles.paragraph}>
                 <li>General Contracting</li>
                 <li>Competitive Sealed Proposal (CSP)</li>
                 <li>Construction Manager at Risk (CMAR)</li>

@@ -30,7 +30,7 @@ export default class Hamburger extends PureComponent {
 
   render() {
     const { onClick } = this.props
-    return (
+    return ( 
       <button className={styles.container} onClick={onClick}>
         <div className={styles.burger}>
           <span className={styles.bar} ref={this.refName('top')} />

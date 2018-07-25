@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: $white;
   border-top: 1px solid $dark-gray;
   width: 100%;
 }
@@ -11,7 +10,6 @@
 .container {
   align-content: space-around;
   align-items: center;
-  background-color: $white;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -28,17 +26,9 @@
 }
 
 .imgContainer {
-  flex: 0 1 50%;
-  min-width: 25%;
+  min-width: 14.25%;
   padding: 20px;
   text-align: center;
-
-  @include breakpoint(medium) {
-    flex: 0 1 33.333%;
-  }
-  @include breakpoint(large) {
-    flex: 0 1 25%;
-  }
 
   img {
     max-width: 130px;

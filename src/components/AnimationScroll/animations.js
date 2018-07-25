@@ -35,14 +35,14 @@ export const imageRight = {
 
 export const slidein = {
   from: {
-    marginLeft: '40%',
+    marginLeft: '30%',
     width: '100%',
     color:'#203040'
   },
   to: {
       marginLeft: '0%',
       width: '100%',
-      color:'#56a6c9'
+      color: '#75B0EA !important'
   }
 }
 
