@@ -125,9 +125,9 @@ export default class HomePage extends Component {
 					ref={whoWeAre => (this.whoWeAre = whoWeAre)}
 					shouldIRender={shouldAnimateWhoWeAre}
 					animated={isWhoWeAreAnimated}>
-					<h2>
-						Going Beyond<br />
-						General contracting.
+					<h2 style={{marginTop: 20}}>
+						GOING BEYOND<br />
+						GENERAL CONTRACTING.
 					</h2>
 				</WhoWeAre>
 				<ContactCTA />

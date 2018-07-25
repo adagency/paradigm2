@@ -9,6 +9,17 @@
 	padding: 0 20px;
 }
 
+.responsiveLeft{
+	display: block;
+	float: left;
+	margin-top:20px;
+	width: 40px;
+
+	@include breakpoint(medium){
+		display: none;
+	}
+}
+
 .left {
 	display: none;
 
