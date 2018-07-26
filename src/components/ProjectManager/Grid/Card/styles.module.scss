@@ -33,7 +33,7 @@
 
     &:before {
       content: '';
-      opacity: 0.25;
+      opacity: 0.5;
       transition: opacity 0.5s ease-in;
     }
 
@@ -198,6 +198,7 @@
 	font-family: $header-font-family;
 	font-size: 1em;
 	font-weight: 200;
+  text-transform: uppercase;
 
 	@include breakpoint(medium) {
 		font-size: 1.2em;
