@@ -146,11 +146,11 @@
 	padding-left: 8px;
 	padding-right: 8px;
 
-	@include breakpoint(1024px down){
+	@include breakpoint(1024px down) {
 		height: 319px;
 	}
 
-	@include breakpoint(768px down){
+	@include breakpoint(768px down) {
 		height: 250px;
 	}
 }
@@ -224,6 +224,12 @@
 
 .cardItem:hover .leaderOverlay {
 	opacity: 0.8;
+	height: 336px;
+	margin: 0;
+}
+
+.cardItem:hover .whiteDivider {
+	width: 70px;
 }
 
 .leaderImage {
@@ -250,17 +256,21 @@
 }
 
 .leaderOverlay {
+	margin-top: 200px;
+	margin-right: 34px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 336px;
+	height: 45px;
+	float: right;
 	width: 100%;
 	opacity: 0;
 	padding: 10px;
-	transition: 0.5s ease;
+	transition: 0.5s ease-in-out;
 	background-color: #2e2e33;
+	z-index: 1;
 
 	@include breakpoint(768px down) {
 		display: none;
@@ -308,6 +318,7 @@
 	height: 1px;
 	width: 15px;
 	background: $white;
+	transition: all 0.3s ease;
 	@include breakpoint(560px down) {
 		display: none;
 	}

@@ -78,9 +78,10 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Dustin Hall is the founder and President of Paradigm Construction. 
-									He began his career in the construction industry back in 1999 when 
-									he joined Fretz Construction Company training under the company’s top professionals.									
+									Dustin Hall is the founder and President of Paradigm
+									Construction. He began his career in the construction industry
+									back in 1999 when he joined Fretz Construction Company
+									training under the company’s top professionals.
 								</div>
 							</div>
 							<div
@@ -99,10 +100,11 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Terry Smith is the Executive Vice President for Paradigm Construction. Terry is a
-									native of the Texas Panhandle and holds a Bachelor’s degree from West Texas
-									State University. He began his career as a teacher and coach at Tomball High
-									School in 1992. 
+									Terry Smith is the Executive Vice President for Paradigm
+									Construction. Terry is a native of the Texas Panhandle and
+									holds a Bachelor’s degree from West Texas State University. He
+									began his career as a teacher and coach at Tomball High School
+									in 1992.
 								</div>
 							</div>
 							<div
@@ -128,18 +130,20 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Gary Foster is the Senior Vice President of Paradigm Construction. Gary is native
-									to Houston and holds a Bachelor’s degree from Texas A&M University. He began
-									his institutional/ educational construction career with the Texas A&M University
-									System Facilities Planning and Construction Division participating in
-									construction projects as the Owner’s representative for the university system.
+									Gary Foster is the Senior Vice President of Paradigm
+									Construction. Gary is native to Houston and holds a Bachelor’s
+									degree from Texas A&M University. He began his institutional/
+									educational construction career with the Texas A&M University
+									System Facilities Planning and Construction Division
+									participating in construction projects as the Owner’s
+									representative for the university system.
 								</div>
 							</div>
 							<div
 								className={styles.leaderInfoBox}
 								ref={c => (this.garyBox = c)}>
 								<h4 className={styles.leaderName}>Gary Foster</h4>
-								<div className={styles.whiteDivider} />
+								<div className={styles.whiteDivider} style={{ height: 2 }} />
 								<span className={styles.leaderPosition}>
 									Senior Vice President
 								</span>
@@ -153,16 +157,18 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Brandon Aery is Vice President at Paradigm Construction and holds a Bachelor’s
-									degree from Angelo State University. He began his career as a Project Engineer
-									for a general contractor working on medical, religious, and commercial facilities.
+									Brandon Aery is Vice President at Paradigm Construction and
+									holds a Bachelor’s degree from Angelo State University. He
+									began his career as a Project Engineer for a general
+									contractor working on medical, religious, and commercial
+									facilities.
 								</div>
 							</div>
 							<div
 								className={styles.leaderInfoBox}
 								ref={c => (this.brandonBox = c)}>
 								<h4 className={styles.leaderName}>Brandon Aery</h4>
-								<div className={styles.whiteDivider} />
+								<div className={styles.whiteDivider} style={{ height: 2 }} />
 								<span className={styles.leaderPosition}>Vice President</span>
 							</div>
 						</Card>
@@ -174,16 +180,16 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Debora Gutierrez is the Controller of Paradigm Construction. She received her
-									Associates of Arts Degree and is currently pursuing her B.S. and M.S. in
-									Accountancy.
+									Debora Gutierrez is the Controller of Paradigm Construction.
+									She received her Associates of Arts Degree and is currently
+									pursuing her B.S. and M.S. in Accountancy.
 								</div>
 							</div>
 							<div
 								className={styles.leaderInfoBox}
 								ref={c => (this.debraBox = c)}>
 								<h4 className={styles.leaderName}>Debra Gutierrez</h4>
-								<div className={styles.whiteDivider} />
+								<div className={styles.whiteDivider} style={{ height: 2 }} />
 								<span className={styles.leaderPosition}>Controller</span>
 							</div>
 						</Card>
