@@ -54,30 +54,30 @@ $saturated-primary: saturate($primary, 45);
 }
 
 .svgLeftRotation {
-	animation: rotateRight 100s infinite linear;
+	animation: rotateRight 50s infinite linear;
 }
 
 .svgRightRotation {
-	animation: rotateLeft 100s infinite linear;
+	animation: rotateLeft 50s infinite linear;
 }
 
 @keyframes rotateRight {
-	0% {
+	from {
 		transform: translate(-40%, -55%) rotate(35deg);
 	}
 
-	100% {
+	to {
 		transform: translate(-40%, -55%) rotate(80deg);
 	}
 }
 
 @keyframes rotateLeft {
-	0% {
-		transform: translate(-40%, -55%) rotate(35deg);
+	from {
+		transform: translate(-40%, -55%) rotate(80deg);
 	}
 
-	100% {
-		transform: translate(-40%, -55%) rotate(80deg);
+	to {
+		transform: translate(-40%, -55%) rotate(35deg);
 	}
 }
 

@@ -21,12 +21,8 @@ export default class ContactCTA extends Component {
 
 	state = {
 		current: this.testimony,
-		isScrollingDown: false,
 		x: 0,
-		y: 0,
-		top: 0,
-		bottom: 0,
-		degrees: ['-40%', '-55%']
+		y: 0
 	};
 
 	componentDidMount() {
@@ -114,36 +110,16 @@ export default class ContactCTA extends Component {
 	}
 
 	handleMouseMove = event => {
-		const { x, y, bottom, top, degrees } = this.state;
-
-		let isScrollingDown = false;
-
-		/*TweenMax.to(this.svg, 2, {
-			css: { transform: 'translate(-40%, -55%) rotate(35deg)' },
-			css: { transform: 'translate(-40%, -55%) rotate(80deg)' }
-		});*/
-
-		if (this.wrapper.getBoundingClientRect().top < top) {
-			//scrolling up
-			isScrollingDown = true;
-			/*	this.svg.style.transform = `translate(${degrees[0]}, ${
-				degrees[1]
-			}) rotate(35deg)`;*/
-		}
-
 		this.setState({
-			x: this.wrapper.getBoundingClientRect().x,
-			y: this.wrapper.getBoundingClientRect().y,
-			top: this.wrapper.getBoundingClientRect().top,
-			bottom: this.wrapper.getBoundingClientRect().bottom,
-			isScrollingDown
+			x: event.clientX,
+			y: event.clientY
 		});
 	};
 
 	getClassnames() {
-		const { isScrollingDown } = this.state;
+		const { x, y } = this.state;
 
-		if (!isScrollingDown) {
+		if (x > y) {
 			return cx(styles.svg, styles.svgLeftRotation);
 		} else {
 			return cx(styles.svg, styles.svgRightRotation);
@@ -160,7 +136,7 @@ export default class ContactCTA extends Component {
 		return (
 			<div
 				className={styles.wrapper}
-				onWheel={this.handleMouseMove}
+				onMouseMove={this.handleMouseMove}
 				ref={wrapper => (this.wrapper = wrapper)}>
 				<div
 					className={styles.background}
