@@ -1,6 +1,6 @@
 .wrapper {
 	//@include mask();
-	height: 100vh;
+	height: auto;
 	background-color: $secondary;
 	border-bottom: 1px solid $black;
 	overflow: hidden;
@@ -165,6 +165,15 @@
 	align-items: center;
 	padding: 0% 10% 0% 10%;
 
+	&:first-child{
+		margin-top:80px;
+		margin-bottom:150px;
+	}
+
+	&:last-child{
+		margin-bottom:80px;
+	}
+
 	@include breakpoint(1083px down) {
 		flex-direction: row;
 		padding: 0;
@@ -180,6 +189,14 @@
 		flex-wrap: nowrap;
 		padding: 0;
 		height: auto;
+
+		&:first-child{			
+			margin-bottom:0px;
+		}
+
+		&:last-child{
+			margin-bottom:80px;
+		}
 	}
 
 	p {

@@ -48,14 +48,14 @@
 .container {
 	@include flex-grid-row();
 	align-items: center;
-	height: 60%;
+	/*height: 60%;*/
 	justify-content: center;
 	padding-right: 30px;
 	width: 100%;
 	background-color: #20333e;
 
 	@include breakpoint(medium) {
-		padding-right: 50px;
+		padding-right: 0px;
 	}
 
 	@include breakpoint(639px down) {
@@ -122,6 +122,9 @@
 	align-items: center;
 	justify-content: center;
 
+	padding-top:30px;
+	padding-bottom: 30px;
+
 	@include flex-grid-column(12);
 	text-align: center;
 
@@ -135,13 +138,10 @@
 	}
 }
 
-.imageWrapper {
-	height: 0;
+.imageWrapper {	
 	margin: auto;
-
-	padding-bottom: 68.142%;
 	position: relative;
-	width: 90%;
+	width: 100%;
 
 	@include breakpoint(639px down) {
 		max-width: 250px;
@@ -163,7 +163,7 @@
 		display: block;
 		left: 0;
 		top: -70px;
-		width: 50vh;
+		
 
 		@include breakpoint(639px down) {
 			width: 100%;
