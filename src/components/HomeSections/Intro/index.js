@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import styles from './styles.module.scss';
 
-const CHANGE_SLIDE_TIME = 3000;
+const CHANGE_SLIDE_TIME = 5000;
 
 export default class IntroSlide extends Component {
 	static propTypes = {

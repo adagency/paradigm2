@@ -90,6 +90,7 @@ export default class HomePage extends Component {
 				<Projects
 					shouldIRender={shouldAnimateProjects}
 					animated={isProjectsAnimated}
+					positionY={positionY}
 					ref={projects => (this.projects = projects)}>
 					<h2>
 						Commitment To Projects:<br />
@@ -125,7 +126,7 @@ export default class HomePage extends Component {
 					ref={whoWeAre => (this.whoWeAre = whoWeAre)}
 					shouldIRender={shouldAnimateWhoWeAre}
 					animated={isWhoWeAreAnimated}>
-					<h2 style={{marginTop: 20}}>
+					<h2 style={{ marginTop: 20 }}>
 						GOING BEYOND<br />
 						GENERAL CONTRACTING.
 					</h2>

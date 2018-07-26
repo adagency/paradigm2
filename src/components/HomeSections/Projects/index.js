@@ -58,6 +58,15 @@ export default class ProjectsSlide extends Component {
 		if (this.props.shouldIRender && !this.props.animated) {
 			this.onEntering();
 		}
+
+		if (this.props.shouldIRender) {
+			if (this.wrapper.offsetTop / 2 < this.props.positionY) {
+				this.partsAnimation.play();
+				setTimeout(() => {
+					this.partsAnimation.pause();
+				}, 500);
+			}
+		}
 	}
 
 	onEntering = () => {
@@ -73,7 +82,10 @@ export default class ProjectsSlide extends Component {
 			0.25
 		);
 
-		TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: 0 }, 0.15, 0.1);
+		//TweenMax.staggerFrom(parts, 0.5, { opacity: 0, y: 0 }, 0.15, 0.1);
+		this.partsAnimation = new TimelineMax()
+			.staggerFrom(parts, 0.5, { opacity: 0, y: 0 }, 0.15, 0.1)
+			.pause();
 	};
 
 	renderImageWrapper() {
