@@ -16,21 +16,7 @@ export default function ContactPage({ data }) {
         title='Contact | Paradigm Construction'
         description='We are not just contractors, we are your collaborative partners. Our pre-construction phase involves design with our architects, and evaluations of the project so that we can coordinate all timelines and logistics prior to start up, ensuring that everything moves as smoothly as possible.'
       />
-      <Banner sizes={data.bannerImage.sizes}>
-        <h2>
-          Get in touch with<br />
-          Paradigm<br />
-          Construction
-        </h2>
-      </Banner>
       <Content>
-        <Col size='two-third'>
-          <AnimScroll>
-            <p>
-            For project inquiries or to arrange a consultation, please contact:
-            </p>
-          </AnimScroll>
-        </Col>
       </Content>
       <Content>
         <Col size='half'>
@@ -47,13 +33,15 @@ export default function ContactPage({ data }) {
         </Col>
         <Col size='half'>
           <AnimScroll>
-            <h3 className={styles.heading}>Corporate Headquarters</h3>
-            <p>
-              26865 Interstate 45<br />
-              Suite 300<br />
-              The Woodlands, Texas 77380<br />
-              p: <a className={styles.link} href={config.tel}>281.890.0584</a> | <a className={styles.link} href={config.address.directions} target='_blank'>MAP</a>
-            </p>
+            <div style={{borderLeft:"1px solid #75b0ea", paddingLeft:"30px", height:"100%"}}>
+              <h3 className={styles.heading}>Corporate Headquarters</h3>
+              <p>
+                26865 Interstate 45<br />
+                Suite 300<br />
+                The Woodlands, Texas 77380<br />
+                p: <a className={styles.link} href={config.tel}>281.890.0584</a> | <a className={styles.linkMap} href={config.address.directions} target='_blank'>click for map</a>
+              </p>
+            </div>
           </AnimScroll>
         </Col>
       </Content>
