@@ -1,9 +1,10 @@
 .heading {
-  color: $blue;
+  color: rgb(117, 176, 234);
   text-transform: uppercase;
 }
 
-.link {
+.link,
+.linkMap {
   opacity: 0.75;
   text-decoration: none;
   transition: opacity 0.15s ease-in;
@@ -11,4 +12,8 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.linkMap {
+  color: rgb(117, 176, 234);
 }
