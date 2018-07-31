@@ -31,7 +31,7 @@ export default class Leaders extends Component {
 
 	componentDidUpdate() {
 		if (this.state.sectionPosition === 0) {
-			this.setState({ sectionPosition: this.wrapper.offsetTop * 2 });
+			this.setState({ sectionPosition: this.wrapper.offsetTop});
 		}
 
 		if (this.props.shouldIRender && !this.props.animated) {
@@ -39,8 +39,7 @@ export default class Leaders extends Component {
 		}
 	}
 
-	onEntering = () => {
-		console.log('loquesea');
+	onEntering = () => {	
 		TweenMax.fromTo(this.dustinImage, 1.3, { x: -10000, y: 0 }, { x: 0, y: 0 });
 		TweenMax.fromTo(this.dustinBox, 1.6, { x: -10000, y: 0 }, { x: 0, y: 0 });
 		TweenMax.fromTo(this.terryImage, 1.9, { x: -10000, y: 0 }, { x: 0, y: 0 });

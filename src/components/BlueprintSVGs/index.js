@@ -43,7 +43,7 @@ export default class BlueprintSVGs extends Component {
   render() {
     const SVG = this.svg
     return (
-      <div className={styles.wrapper} ref={c => { this.node = c }}>
+      <div className={styles.wrapper2} ref={c => { this.node = c }}>
         <div className={styles.container}>
           <SVG className={styles.svg} refAnim={c => { this.svgDiv = c }} />
         </div>

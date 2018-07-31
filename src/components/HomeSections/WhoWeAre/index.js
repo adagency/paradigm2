@@ -35,7 +35,7 @@ export default class WhoWeAreSlide extends Component {
 
 	componentDidUpdate() {
 		if (this.state.sectionPosition === 0) {
-			this.setState({ sectionPosition: this.wrapper.offsetTop * 3 });
+			this.setState({ sectionPosition: this.wrapper.offsetTop* 2 });
 		}
 
 		if (this.props.shouldIRender && !this.props.animated) {
