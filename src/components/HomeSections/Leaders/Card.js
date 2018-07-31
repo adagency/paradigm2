@@ -7,7 +7,8 @@ import styles from './styles.module.scss';
 class Card extends Component {
 	static propTypes = {
 		children: PropTypes.any.isRequired,
-		hasOverlay: PropTypes.bool.isRequired,
+		// hasOverlay: PropTypes.bool.isRequired,
+		hasOverlay: PropTypes.bool,		
 		styles: PropTypes.object
 	};
 

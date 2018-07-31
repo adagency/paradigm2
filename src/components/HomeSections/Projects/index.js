@@ -6,6 +6,8 @@ import ProjectsSlideBackground from '../../../images/banners/section-2.png';
 
 import styles from './styles.module.scss';
 
+import Blueprint from 'components/BlueprintSVGs'
+
 import part1 from './1.png';
 import part2 from './2.png';
 import part3 from './3.png';
@@ -128,7 +130,7 @@ export default class ProjectsSlide extends Component {
 				<div style={{ textAlign: 'right' }}>
 					<Link className={styles.link} to="/projects#">
 						<button className={styles.viewOurProjectsButton}>
-							<span>- View Our Projects</span>
+							<span>- VIEW OUR PROJECTS</span>
 						</button>
 					</Link>
 				</div>
@@ -143,7 +145,9 @@ export default class ProjectsSlide extends Component {
 			<div
 				className={styles.wrapper}
 				ref={wrapper => (this.wrapper = wrapper)}
-				style={{ backgroundImage: `url(${ProjectsSlideBackground})` }}>
+				>
+				<Blueprint svg='WhoWeAre' custom='600 100%' duration={3} />
+				
 				<div className={styles.background}>
 					{/*<SVGBackground
 						refAnim={c => {

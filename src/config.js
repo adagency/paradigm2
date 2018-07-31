@@ -1,5 +1,5 @@
 var PHONE = ['281', '890', '0584']
-var EMAIL = 'TODO'
+var EMAIL = 'info@pcc-tx.com'
 var CAREEREMAIL = 'careers@pcc-tx.com'
 
 var config = {

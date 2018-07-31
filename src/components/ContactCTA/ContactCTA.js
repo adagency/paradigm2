@@ -119,7 +119,9 @@ export default class ContactCTA extends Component {
 	getClassnames() {
 		const { x, y } = this.state;
 
-		if (x > y) {
+		// console.log(x);
+		// console.log(y);
+		if (x > (window.innerWidth/2) ) {
 			return cx(styles.svg, styles.svgLeftRotation);
 		} else {
 			return cx(styles.svg, styles.svgRightRotation);
@@ -156,6 +158,7 @@ export default class ContactCTA extends Component {
 					<rect x={50 + gap} y={50 + gap} width={50 - gap} height={50 - gap} />
 					<rect x="0" y={50 + gap} width={50 - gap} height={50 - gap} />
 				</svg>
+
 				<div className={styles.container}>
 					<div className={styles.row}>
 						<div className={styles.col}>

@@ -67,7 +67,7 @@ export default class WhoWeAreSlide extends Component {
 					<div style={{ textAlign: 'center' }}>
 						<Link className={styles.link} to="/about">
 							<button className={styles.seeWhoWeAreButton}>
-								<span>- See Who we are</span>
+								<span>- SEE WHO WE ARE</span>
 							</button>
 						</Link>
 					</div>

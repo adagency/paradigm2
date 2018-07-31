@@ -47,36 +47,46 @@ $saturated-primary: saturate($primary, 45);
 	left: 50%;
 	position: absolute;
 	top: 50%;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 2s ease-in-out;
 	transform-origin: center;
 	width: 150vmax;
 	z-index: -1;
+	opacity:0.8;
+
+	-webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
 }
 
 .svgLeftRotation {
-	animation: rotateRight 50s infinite linear;
+	animation: rotateRight 3s 1 ease-in-out;
+	animation-fill-mode: forwards;
+
 }
 
 .svgRightRotation {
-	animation: rotateLeft 50s infinite linear;
+	animation: rotateLeft 3s 1 ease-in-out;
+	animation-fill-mode: forwards;
+
 }
 
 @keyframes rotateRight {
-	from {
+	from {		
 		transform: translate(-40%, -55%) rotate(35deg);
 	}
 
 	to {
-		transform: translate(-40%, -55%) rotate(80deg);
+		transform: translate(-40%, -55%) rotate(45deg);
 	}
 }
 
 @keyframes rotateLeft {
 	from {
-		transform: translate(-40%, -55%) rotate(80deg);
+		transform: translate(-40%, -55%) rotate(45deg);
 	}
 
-	to {
+	to {		
 		transform: translate(-40%, -55%) rotate(35deg);
 	}
 }

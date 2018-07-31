@@ -33,7 +33,7 @@ export default function ContactPage({ data }) {
         </Col>
         <Col size='half'>
           <AnimScroll>
-            <div style={{borderLeft:"1px solid #75b0ea", paddingLeft:"30px", height:"100%"}}>
+            <div style={{borderLeft:"1px solid #75b0ea", paddingLeft:"30px", minHeight:"220px"}}>
               <h3 className={styles.heading}>Corporate Headquarters</h3>
               <p>
                 26865 Interstate 45<br />

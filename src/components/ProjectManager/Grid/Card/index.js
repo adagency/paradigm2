@@ -13,7 +13,7 @@ export default class Card extends Component {
     const style = {
       backgroundImage: `url(${content.data.banner.url})`,
     }
-    return (
+    return (      
       <Link className={styles.wrapper} to={`/projects#${content.uid}`}>
         <div className={styles.background} style={style} />
         <div className={styles.content}>
@@ -29,7 +29,7 @@ export default class Card extends Component {
             <span>View</span>
           </button>
         </div>
-      </Link>
+      </Link>      
     )
   }
 }

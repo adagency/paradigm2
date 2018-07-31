@@ -118,7 +118,7 @@ export default class ProjectsSlide extends Component {
 						<div style={{ textAlign: 'right' }}>
 							<Link className={styles.link} to="/projects#">
 								<button className={styles.viewOurProjectsButton}>
-									<span>- View Our Projects</span>
+									<span>- VIEW OUR PROJECTS</span>
 								</button>
 							</Link>
 						</div>

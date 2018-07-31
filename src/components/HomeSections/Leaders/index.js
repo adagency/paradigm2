@@ -40,7 +40,7 @@ export default class Leaders extends Component {
 	}
 
 	onEntering = () => {
-		TweenMax.fromTo(this.awardCard, 1, { x: -800, y: 0 }, { x: 0, y: 0 });
+		console.log('loquesea');
 		TweenMax.fromTo(this.dustinImage, 1.3, { x: -10000, y: 0 }, { x: 0, y: 0 });
 		TweenMax.fromTo(this.dustinBox, 1.6, { x: -10000, y: 0 }, { x: 0, y: 0 });
 		TweenMax.fromTo(this.terryImage, 1.9, { x: -10000, y: 0 }, { x: 0, y: 0 });

@@ -20,7 +20,6 @@ import deliveryMethods from './delivery-icons.png'
 import bim from './bim-icon.png'
 import delivery from './delivery-icons.png'
 
-
 export default function ServicesPage({ data }) {
   return (
     <main>
@@ -30,13 +29,11 @@ export default function ServicesPage({ data }) {
       />
       <Banner sizes={data.bannerImage.sizes}>
         <h2>
-          Our engaged approach to . . .
+          Our engaged approach to...
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <div className={styles.topPrint}>
-          <Blueprint svg='Services' />
-        </div>
+        <Blueprint svg='Services' custom='600 100%' duration={3} />
         <Content padding='medium'>
           <AnimScroll types='fadeIn'>
           <Col size='two-third'>
