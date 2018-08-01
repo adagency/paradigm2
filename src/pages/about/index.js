@@ -24,7 +24,7 @@ export default function AboutPage({ data }) {
         <h2>Innovative and instinctual. We are committed to exceeding your expectations</h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='WhoWeAre' custom='600 100%' duration={3} />
+        <Blueprint svg='WhoWeAre' custom='600 100%' duration={9} />
         <Content padding='large'>
           <Col size='two-third'>
             <AnimScroll>

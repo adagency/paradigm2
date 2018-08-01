@@ -6,12 +6,13 @@ import AnimationScroll from 'components/AnimationScroll'
 
 import styles from './styles.module.scss'
 
-export default function Image({ alt, size, src }) {
+export default function Image({ alt, size, src , trigger}) {
+
   const style = {
     backgroundImage: `url(${src})`,
   }
   return (
-    <AnimationScroll types='gallery' duration={6}>
+    <AnimationScroll types='gallery' duration={2} trigger={trigger}>
       <div className={cn(styles.container, styles[`size-${size}`])}>
         <div role='img' aria-label={alt} className={styles.image} style={style} />
       </div>
@@ -23,4 +24,5 @@ Image.propTypes = {
   alt: PropTypes.string,
   size: PropTypes.string,
   src: PropTypes.string,
+  trigger: PropTypes.number
 }

@@ -52,7 +52,7 @@ export default class WhoWeAreSlide extends Component {
 			0.25
 		);
 
-		TweenMax.from(this.imageWrapper, 1, { opacity: 0, y: '-50%' }, 0.5);
+		TweenMax.from(this.imageWrapper, 2, { opacity: 0, y: '-50%' }, 0.5);
 	};
 
 	onLeaving = (direction, timeout) => {

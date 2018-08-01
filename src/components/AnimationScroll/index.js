@@ -12,12 +12,14 @@ export default class AnimationScroll extends Component {
     duration: PropTypes.number,
     delay: PropTypes.number,
     types: PropTypes.string,
+    trigger: PropTypes.number
   }
 
   static defaultProps = {
     duration: 0.5,
     delay: 0,
     types: 'fadeInUp',
+    trigger: 0.7
   }
 
   static contextTypes = {
@@ -36,20 +38,24 @@ export default class AnimationScroll extends Component {
 
   componentDidMount() {
     const { duration } = this.props
+
     const types = this.props.types.replace(/ /g, '').split(',')
 
     this.animRefs.forEach((ref, index) => {
       const node = findDOMNode(ref)
       const delay = window.innerWidth < 640 ? 0 : this.props.delay
+
       const type = types[index] || types[types.length - 1]
       const animation = TweenMax.fromTo(node, duration,
         animations[type].from,
         animations[type].to,
       ).pause().delay(delay * index)
 
+      // console.log(node);
+
       const scene = new Scene({
         triggerElement: node,
-        triggerHook: 0.7,
+        triggerHook: this.props.trigger,
       })
       const indicatorName = 'Scrollanimation ' + this.count + '.' + index
       scene.on('enter', () => animation.play())

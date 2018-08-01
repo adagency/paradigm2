@@ -56,6 +56,6 @@ export const rotation = {
 }
 
 export const gallery = {
-  from: { opacity: 0 },
-  to: { opacity: 1 }
+  from: { y:-50, opacity: 0 },
+  to: { y:0, opacity: 1 }
 }
