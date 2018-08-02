@@ -48,7 +48,7 @@
 .container {
 	@include flex-grid-row();
 	align-items: center;
-	/*height: 60%;*/
+	min-height: 80%;
 	justify-content: center;
 	padding-right: 30px;
 	width: 100%;
