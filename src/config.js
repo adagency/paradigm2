@@ -12,7 +12,7 @@ var config = {
   name: 'Paradigm Contruction',
   legal_name: 'Paradigm Contruction',
   // url: 'https://paradigmconstruction-tx.com',
-  url: 'http://178.128.188.243/',
+  url: 'http://compassionate-wozniak-99f5f5.netlify.com',
   phone: PHONE.join('.'),
 
   // Required address object for schema
