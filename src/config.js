@@ -38,7 +38,8 @@ var config = {
   googleAnalytics: 'UA-TODO-XX',
 
   // Font codes
-  typekit: 'knq2tdr',
+  // typekit: 'knq2tdr',
+  typekit: 'pnp5vln',
 }
 
 module.exports = config
