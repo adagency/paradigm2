@@ -122,10 +122,12 @@ export default class ContactCTA extends Component {
 
 		// console.log(x);
 		// console.log(y);
-		if (x > (window.innerWidth/2) ) {
-			return cx(styles.svg, styles.svgLeftRotation);
-		} else {
-			return cx(styles.svg, styles.svgRightRotation);
+		try{			
+			if (x > (window.innerWidth/2) ) {
+				return cx(styles.svg, styles.svgLeftRotation);
+			} else {
+				return cx(styles.svg, styles.svgRightRotation);
+			}
 		}
 	}
 

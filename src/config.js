@@ -11,7 +11,8 @@ var config = {
   logo: '/paradign-nav-logo.png',
   name: 'Paradigm Contruction',
   legal_name: 'Paradigm Contruction',
-  url: 'https://paradigmconstruction-tx.com',
+  // url: 'https://paradigmconstruction-tx.com',
+  url: 'http://178.128.188.243/',
   phone: PHONE.join('.'),
 
   // Required address object for schema
