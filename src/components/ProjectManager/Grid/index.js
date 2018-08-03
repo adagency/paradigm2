@@ -35,6 +35,24 @@ export default class Grid extends Component {
 	  }
 	}
 
+	componentWillUpdate(){
+		this.createAnimation()
+		this.animation.play()
+
+		const query = queryString.parse(location.search)
+
+		if (query.ref) {
+			const { y } = this.industries.node.getBoundingClientRect()
+
+			window.scroll({
+				top: y,
+				left: 0,
+				behavior: 'smooth',
+			})
+		}
+		
+	}
+
 	componentDidUpdate(prevProps, prevState) {
 	  if (prevState.filter !== this.state.filter) {
 	    this.createAnimation()

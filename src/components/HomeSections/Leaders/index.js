@@ -77,10 +77,7 @@ export default class Leaders extends Component {
 							/>
 							<div className={styles.leaderOverlay}>
 								<div>
-									Dustin Hall is the founder and President of Paradigm
-									Construction. He began his career in the construction industry
-									back in 1999 when he joined Fretz Construction Company
-									training under the company’s top professionals.
+									Dustin Hall is the founder and President of Paradigm Construction. He began his career in the construction industry back in 1999 when he joined Fretz Construction Company training under the company’s top professionals.
 								</div>
 							</div>
 							<div

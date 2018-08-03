@@ -27,7 +27,7 @@ export default function ContactPage({ data }) {
             </p>
             <h3 className={styles.heading}>Careers</h3>
             <p>
-              <a className={styles.link} href={config.careersMailto}>careers@pcc-tx.com</a>
+              <a className={styles.link} href={config.careersMailto}>info@pcc-tx.com</a>
             </p>
           </AnimScroll>
         </Col>

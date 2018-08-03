@@ -15,7 +15,7 @@ export default class Industries extends Component {
 	static played = false;
 
 	componentDidMount() {
-	  if (!Industries.played) {
+	  if (!Industries.played) {	  
 	    this.animation = new TimelineMax({
 	      paused: true,
 	      onComplete: () => {

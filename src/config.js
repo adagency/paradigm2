@@ -1,6 +1,6 @@
 var PHONE = ['281', '890', '0584']
 var EMAIL = 'info@pcc-tx.com'
-var CAREEREMAIL = 'careers@pcc-tx.com'
+var CAREEREMAIL = 'info@pcc-tx.com'
 
 var config = {
   meta_title: 'Paradigm',
