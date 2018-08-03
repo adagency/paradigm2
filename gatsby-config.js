@@ -7,10 +7,10 @@ module.exports = {
 		title: config.name,
 		siteUrl: config.url
 	},
-	pathPrefix: '/paradigm',
+	// pathPrefix: '/paradigm',
 	plugins: [
 		// Turn on offline before deploy
-		// `gatsby-plugin-offline`,
+		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-react-next`,
 		'gatsby-plugin-resolve-src',

@@ -6,7 +6,7 @@ import ProjectsSlideBackground from '../../../images/banners/section-2.png';
 
 import styles from './styles.module.scss';
 
-import Blueprint from 'components/BlueprintSVGs'
+import Blueprint from 'components/BlueprintTest'
 
 import part1 from './1.png';
 import part2 from './2.png';
@@ -146,7 +146,7 @@ export default class ProjectsSlide extends Component {
 				className={styles.wrapper}
 				ref={wrapper => (this.wrapper = wrapper)}
 				>
-				<Blueprint svg='WhoWeAre' custom='600 100%' duration={3} />
+				<Blueprint svg='WhoWeAre' custom='600 100%' duration={6}/>
 				
 				<div className={styles.background}>
 					{/*<SVGBackground

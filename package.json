@@ -77,7 +77,9 @@
 		"stylelint": "^8.4.0",
 		"stylelint-order": "^0.7.0"
 	},
-	"keywords": ["gatsby"],
+	"keywords": [
+		"gatsby"
+	],
 	"license": "MIT",
 	"main": "n/a",
 	"scripts": {
@@ -87,15 +89,16 @@
 		"build": "gatsby build && npm run build:post",
 		"build:post": "node scripts",
 		"develop": "gatsby develop -p 3000",
-		"format":
-			"prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+		"format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint --format=pretty --ignore-path .gitignore .",
 		"lint:staged": "lint-staged",
 		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"lint-staged": {
-		"*.js": ["eslint --format=pretty --fix"],
+		"*.js": [
+			"eslint --format=pretty --fix"
+		],
 		"*.scss": "stylelint"
 	}
 }

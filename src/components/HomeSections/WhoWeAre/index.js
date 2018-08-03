@@ -35,7 +35,7 @@ export default class WhoWeAreSlide extends Component {
 
 	componentDidUpdate() {
 		if (this.state.sectionPosition === 0) {
-			this.setState({ sectionPosition: this.wrapper.offsetTop* 2 });
+			this.setState({ sectionPosition: this.wrapper.offsetTop* 1.7 });
 		}
 
 		if (this.props.shouldIRender && !this.props.animated) {
@@ -52,7 +52,7 @@ export default class WhoWeAreSlide extends Component {
 			0.25
 		);
 
-		TweenMax.from(this.imageWrapper, 2, { opacity: 0, y: '-50%' }, 0.5);
+		TweenMax.from(this.imageWrapper, 4, { opacity: 0, y: '-50%' }, 0.5);
 	};
 
 	onLeaving = (direction, timeout) => {

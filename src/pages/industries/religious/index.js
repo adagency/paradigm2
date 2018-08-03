@@ -22,7 +22,7 @@ export default function ReligiousPage({ data }) {
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='Religious' custom='600 100%' duration={9} />
+        <Blueprint svg='Religious' custom='600 100%' duration={9}/>
         <Content padding='xlarge'>
           <Col size='two-third'>
             <AnimScroll>
