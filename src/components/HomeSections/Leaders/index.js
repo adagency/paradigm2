@@ -62,7 +62,7 @@ export default class Leaders extends Component {
 			<div className={styles.wrapper} ref={wrapper => (this.wrapper = wrapper)}>
 				{shouldIRender && (
 					<div className={styles.cardRow}>
-						<Card style={{ backgroundColor: '#20333E' }}>
+						<Card style={{ backgroundColor: '#203040' }}>
 							<div className={styles.awardCard} ref={c => (this.awardCard = c)}>
 								<p>
 									AWARD-WINNING PERSONNEL.<br />HIGHER STANDARDS OF WORK.

@@ -37,7 +37,7 @@ export default class Industries extends Component {
 
 	render() {
 	  return (
-  <div
+  <div id="industries"
   className={styles.container}
   ref={c => {
 	        this.node = c

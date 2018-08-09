@@ -33,7 +33,7 @@ export default function ServicesPage({ data }) {
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='Services' custom='600 100%' duration={3} />
+        <Blueprint svg='Services' custom='600 100%' duration={6} />
         <Content padding='medium'>
           <AnimScroll types='fadeIn'>
           <Col size='two-third'>

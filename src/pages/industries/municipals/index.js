@@ -22,7 +22,7 @@ export default function MunicipalsPage({ data }) {
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='Municipals' custom='1500 50%' duration={10} />
+        <Blueprint svg='Municipals' custom='1500 50%' duration={6} />
         <Content padding='xlarge'>
           <Col size='two-third'>
             <AnimScroll>
