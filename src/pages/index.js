@@ -148,7 +148,7 @@ export const query = graphql`
 				...GatsbyImageSharpSizes
 			}
 		}
-		introSlide3: imageSharp(id: { regex: "/slides/home-banner-03.png/" }) {
+		introSlide3: imageSharp(id: { regex: "/slides/home-banner-05.jpg/" }) {
 			sizes(quality: 80, maxWidth: 2400) {
 				...GatsbyImageSharpSizes
 			}

@@ -2,12 +2,11 @@
 	"nav": {
 		"links": [
 			{ "text": "Home", "to": "/" },
-			{ "text": "Projects", "to": "/paradigm/projects#" },
-			{ "text": "Services", "to": "/paradigm/services" },
-			{ "text": "Industries", "to": "/paradigm/projects?ref=industries" },
-			{ "text": "About", "to": "/paradigm/about" },
-			{ "text": "Blog", "to": "/paradigm/blog" },
-			{ "text": "Contact", "to": "/paradigm/contact" }
+			{ "text": "Projects", "to": "/projects#" },
+			{ "text": "Services", "to": "/services" },
+			{ "text": "Industries", "to": "/projects?ref=industries" },
+			{ "text": "About", "to": "/about" },			
+			{ "text": "Contact", "to": "/contact" }
 		]
 	}
 }

@@ -8,7 +8,7 @@ export default [
     to: '/industries/education',
   },
   {
-    text: 'Municipals',
+    text: 'Municipal',
     to: '/industries/municipals',
   },
   // {

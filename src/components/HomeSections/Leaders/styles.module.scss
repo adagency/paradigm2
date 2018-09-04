@@ -243,8 +243,9 @@
 .cardItem:hover .leaderOverlay {
 	opacity: 0.8;
 	height: 336px;
-	margin: 0;
+	margin: 0 auto;
 	font-size:14px;
+	text-align:center;
 }
 
 .cardItem:hover .whiteDivider {
