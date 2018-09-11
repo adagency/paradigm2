@@ -13,7 +13,7 @@ export default function ReligiousPage({ data }) {
   return (
     <main>
       <Helmet
-        title='Commercial'
+        title='Religious'
         description={`We realize that each or our clients projects is unique, requiring the highest level of attention to detail and quality, to which Paradigm’s church building team is more than qualified.`}
       />
       <Banner sizes={data.bannerImage.sizes}>
@@ -22,7 +22,7 @@ export default function ReligiousPage({ data }) {
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='Religious' custom='600 100%' duration={9}/>
+        <Blueprint svg='Commercial'/>
         <Content padding='xlarge'>
           <Col size='two-third'>
             <AnimScroll>

@@ -13,7 +13,7 @@ export default function MunicipalsPage({ data }) {
   return (
     <main>
       <Helmet
-        title='Commercial'
+        title='Municipals'
         description={`Inspiring workspaces, high tech security features and inviting atmospheres; Paradigm takes all these unique factors into account when planning and designing in the municipal construction markets.`}
       />
       <Banner sizes={data.bannerImage.sizes}>
@@ -22,7 +22,7 @@ export default function MunicipalsPage({ data }) {
         </h2>
       </Banner>
       <div className={styles.wrapper}>
-        <Blueprint svg='Municipals' custom='1500 50%' duration={6} />
+        <Blueprint svg='Commercial' />
         <Content padding='xlarge'>
           <Col size='two-third'>
             <AnimScroll>
