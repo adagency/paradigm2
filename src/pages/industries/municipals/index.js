@@ -13,7 +13,7 @@ export default function MunicipalsPage({ data }) {
   return (
     <main>
       <Helmet
-        title='Municipals'
+        title='Commercial'
         description={`Inspiring workspaces, high tech security features and inviting atmospheres; Paradigm takes all these unique factors into account when planning and designing in the municipal construction markets.`}
       />
       <Banner sizes={data.bannerImage.sizes}>

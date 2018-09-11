@@ -13,7 +13,7 @@ export default function EducationPage({ data }) {
   return (
     <main>
       <Helmet
-        title='Education'
+        title='Commercial'
         description={`Having completed a variety of both new construction and renovation projects in the educational sector, we are capable of the most innovative and creative designs for vibrant busy schools and libraries.`}
       />
       <Banner sizes={data.bannerImage.sizes}>

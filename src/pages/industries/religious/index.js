@@ -13,7 +13,7 @@ export default function ReligiousPage({ data }) {
   return (
     <main>
       <Helmet
-        title='Religious'
+        title='Commercial'
         description={`We realize that each or our clients projects is unique, requiring the highest level of attention to detail and quality, to which Paradigm’s church building team is more than qualified.`}
       />
       <Banner sizes={data.bannerImage.sizes}>
